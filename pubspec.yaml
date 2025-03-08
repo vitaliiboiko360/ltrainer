@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:
@@ -54,7 +55,54 @@ flutter:
   fonts:
     - family: Nunito
       fonts:
-        - asset: fonts/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTo3j77e.woff2
+        - asset: fonts/Nunito/Nunito-Black.ttf
+          style: normal
+          weight: 900
+        - asset: fonts/Nunito/Nunito-BlackItalic.ttf
+          style: italic
+          weight: 900
+        - asset: fonts/Nunito/Nunito-ExtraBold.ttf
+          style: normal
+          weight: 800
+        - asset: fonts/Nunito/Nunito-ExtraBoldItalic.ttf
+          style: italic
+          weight: 800
+        - asset: fonts/Nunito/Nunito-Bold.ttf
+          style: normal
+          weight: 700
+        - asset: fonts/Nunito/Nunito-BoldItalic.ttf
+          style: italic
+          weight: 700
+        - asset: fonts/Nunito/Nunito-SemiBold.ttf
+          style: normal
+          weight: 600
+        - asset: fonts/Nunito/Nunito-SemiBoldItalic.ttf
+          style: italic
+          weight: 600
+        - asset: fonts/Nunito/Nunito-Medium.ttf
+          style: normal
+          weight: 500
+        - asset: fonts/Nunito/Nunito-MediumItalic.ttf
+          style: italic
+          weight: 500
+        - asset: fonts/Nunito/Nunito-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: fonts/Nunito/Nunito-Italic.ttf
+          style: italic
+          weight: 400
+        - asset: fonts/Nunito/Nunito-Light.ttf
+          style: normal
+          weight: 300
+        - asset: fonts/Nunito/Nunito-LightItalic.ttf
+          style: italic
+          weight: 300
+        - asset: fonts/Nunito/Nunito-ExtraLight.ttf
+          style: normal
+          weight: 200
+        - asset: fonts/Nunito/Nunito-ExtraLightItalic.ttf
+          style: italic
+          weight: 200
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
