@@ -15,9 +15,43 @@ class _LineState extends State<Line> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Row(
+          children: [
+            TextButton(
+              child: Text(
+                'Word',
+                style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+              ),
+              onPressed: () {},
+            ),
+            TextButton(
+              child: Text(
+                'Word',
+                style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+              ),
+              onPressed: () {},
+            ),
+            TextButton(
+              child: Text(
+                'Word',
+                style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+              ),
+              onPressed: () {},
+            ),
+            TextButton(
+              child: Text(
+                'Word',
+                style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+              ),
+              onPressed: () {},
+            ),
+          ],
+        ),
         Text(
           'You have clicked the button this many times',
           style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+          // onPressed: () {
+          // },
         ),
         hr,
         Text('Count: $count'),
