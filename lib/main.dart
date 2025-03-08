@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/line.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Line(),
             const Text(
               'You have clicked the button this many times:',
               style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
