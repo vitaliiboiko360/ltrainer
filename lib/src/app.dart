@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/home.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(150, 5, 105, 214),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
