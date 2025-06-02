@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Line(),
             const Text(
               'You have clicked the button this many times:',
-              style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+              style: TextStyle(fontFamily: 'Roboto', fontSize: 26),
             ),
             Text(
               '$_counter',

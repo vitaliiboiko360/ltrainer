@@ -48,8 +48,8 @@ class _LineState extends State<Line> {
           ],
         ),
         Text(
-          'You have clicked the button this many times',
-          style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+          'You have clicked the button this many times !!!!',
+          style: TextStyle(fontFamily: 'NunitoBlack', fontSize: 24),
           // onPressed: () {
           // },
         ),
