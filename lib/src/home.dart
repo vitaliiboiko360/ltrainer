@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ltrainer/src/line.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
+  const HomePage({super.key});
 
-  final String title;
+  final String title = 'why Flutter Demo Home Page local';
 
   @override
   State<HomePage> createState() => _MyHomePageState();
