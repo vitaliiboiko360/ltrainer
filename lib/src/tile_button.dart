@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-var buttonStyle = ButtonStyle(
-  fixedSize: WidgetStateProperty.resolveWith<Size?>((Set<WidgetState> states) {
-    return Size(320, 320);
-  }),
-);
+class TileButton extends StatelessWidget {
+  TileButton({super.key, required this.onPressed});
 
-class TileButton extends TextButton {
-  const TileButton({
-    super.key,
-    super.onPressed,
-    super.child = const Text('Hiragana'),
-  });
+  VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      style: ButtonStyle(
+        fixedSize: WidgetStateProperty.resolveWith<Size?>((
+          Set<WidgetState> states,
+        ) {
+          return Size(320, 320);
+        }),
+      ),
+      child: const Text('Hiragana'),
+    );
+  }
 }
