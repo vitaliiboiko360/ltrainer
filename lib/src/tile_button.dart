@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TileButton extends StatelessWidget {
-  TileButton({super.key, required this.onPressed});
+const double sizeX = 240;
+const double sizeY = 240;
 
-  VoidCallback onPressed;
+const double radius = 32;
+
+class TileButton extends StatelessWidget {
+  const TileButton({super.key, required this.onPressed});
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +18,13 @@ class TileButton extends StatelessWidget {
         fixedSize: WidgetStateProperty.resolveWith<Size?>((
           Set<WidgetState> states,
         ) {
-          return Size(320, 320);
+          return Size(sizeX, sizeY);
         }),
         shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
           Set<WidgetState> states,
         ) {
           return RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(32)),
+            borderRadius: BorderRadius.all(Radius.circular(radius)),
           );
         }),
       ),
