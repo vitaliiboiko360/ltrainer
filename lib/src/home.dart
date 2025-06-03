@@ -31,7 +31,8 @@ class _MyHomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            TileButton(onPressed: _incrementCounter),
+            TileButton(onPressed: _incrementCounter, name: 'Hiragana'),
+            TileButton(onPressed: _incrementCounter, name: 'Katakana'),
             Line(),
             const Text(
               'You have clicked the button this many times:',
