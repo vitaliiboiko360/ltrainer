@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class TileButton extends FloatingActionButton {
+var buttonStyle = ButtonStyle(
+  fixedSize: WidgetStateProperty.resolveWith<Size?>((Set<WidgetState> states) {
+    return Size(320, 320);
+  }),
+);
+
+class TileButton extends TextButton {
   const TileButton({
     super.key,
     super.onPressed,
-    tooltip = 'Increment',
-    child = const Icon(Icons.add),
+    super.child = const Text('Hiragana'),
   });
 }
