@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/line.dart';
+import 'package:ltrainer/src/tile_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,6 +31,7 @@ class _MyHomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            TileButton(onPressed: _incrementCounter),
             Line(),
             const Text(
               'You have clicked the button this many times:',
