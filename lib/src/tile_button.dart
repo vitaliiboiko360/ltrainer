@@ -6,9 +6,10 @@ const double sizeY = 240;
 const double radius = 32;
 
 class TileButton extends StatelessWidget {
-  const TileButton({super.key, required this.onPressed});
+  const TileButton({super.key, required this.onPressed, required this.name});
 
   final VoidCallback onPressed;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class TileButton extends StatelessWidget {
           );
         }),
       ),
-      child: const Text('Hiragana'),
+      child: Text(name),
     );
   }
 }
