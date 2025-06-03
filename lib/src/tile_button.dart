@@ -15,6 +15,13 @@ class TileButton extends StatelessWidget {
         ) {
           return Size(320, 320);
         }),
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
+          Set<WidgetState> states,
+        ) {
+          return RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(32)),
+          );
+        }),
       ),
       child: const Text('Hiragana'),
     );
