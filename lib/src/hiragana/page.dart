@@ -18,6 +18,10 @@ class _MyHomePageState extends State<HiraganaPage> {
     });
   }
 
+  double _calcTop(int k) {
+    return 100 + (k * 30);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +30,7 @@ class _MyHomePageState extends State<HiraganaPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              color: Colors.grey.shade50,
+              color: Colors.grey.shade100,
               width: 400,
               height: 400,
               child: Stack(
@@ -38,7 +42,7 @@ class _MyHomePageState extends State<HiraganaPage> {
                   // ),
                   Positioned(
                     left: 100.0,
-                    top: 100,
+                    top: _calcTop(0),
                     child: TextButton(
                       onPressed: () {},
                       // style: TextButton.styleFrom(fixedSize: Size(10, 10)),
@@ -47,22 +51,22 @@ class _MyHomePageState extends State<HiraganaPage> {
                   ),
                   Positioned(
                     left: 90,
-                    top: 120,
+                    top: _calcTop(1),
                     child: TextButton(onPressed: () {}, child: const Text('i')),
                   ),
                   Positioned(
                     left: 85,
-                    top: 140,
+                    top: _calcTop(2),
                     child: TextButton(onPressed: () {}, child: const Text('u')),
                   ),
                   Positioned(
                     left: 80,
-                    top: 160,
+                    top: _calcTop(3),
                     child: TextButton(onPressed: () {}, child: const Text('e')),
                   ),
                   Positioned(
                     left: 75,
-                    top: 180,
+                    top: _calcTop(4),
                     child: TextButton(onPressed: () {}, child: const Text('o')),
                   ),
                 ],
