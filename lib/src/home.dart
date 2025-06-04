@@ -20,6 +20,10 @@ class _MyHomePageState extends State<HomePage> {
     });
   }
 
+  void _goToHiragana() {
+    Navigator.pushNamed(context, '/hiragana');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +35,7 @@ class _MyHomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            TileButton(onPressed: _incrementCounter, name: 'Hiragana'),
+            TileButton(onPressed: _goToHiragana, name: 'Hiragana'),
             TileButton(onPressed: _incrementCounter, name: 'Katakana'),
             Line(),
             const Text(
@@ -44,11 +48,6 @@ class _MyHomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
