@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/home.dart';
+import 'package:ltrainer/src/hiragana/page.dart';
 
 final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   '/': (BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text('Home Route')));
+    return HomePage();
   },
-  '/about': (BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text('About Route')));
+  '/hiragana': (BuildContext context) {
+    return HiraganaPage();
   },
 };
