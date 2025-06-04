@@ -38,33 +38,33 @@ class _MyHomePageState extends State<HiraganaPage> {
                   // ),
                   Positioned(
                     left: 100.0,
-                    top: 150.0,
+                    top: 100,
                     child: TextButton(
                       onPressed: () {},
                       // style: TextButton.styleFrom(fixedSize: Size(10, 10)),
                       child: const Text('a'),
                     ),
                   ),
-                  // Positioned(
-                  //   left: 90,
-                  //   top: 140,
-                  //   child: TextButton(onPressed: () {}, child: const Text('i')),
-                  // ),
-                  // Positioned(
-                  //   left: 85,
-                  //   top: 130,
-                  //   child: TextButton(onPressed: () {}, child: const Text('u')),
-                  // ),
-                  // Positioned(
-                  //   left: 80,
-                  //   top: 120,
-                  //   child: TextButton(onPressed: () {}, child: const Text('e')),
-                  // ),
-                  // Positioned(
-                  //   left: 75,
-                  //   top: 110,
-                  //   child: TextButton(onPressed: () {}, child: const Text('o')),
-                  // ),
+                  Positioned(
+                    left: 90,
+                    top: 120,
+                    child: TextButton(onPressed: () {}, child: const Text('i')),
+                  ),
+                  Positioned(
+                    left: 85,
+                    top: 140,
+                    child: TextButton(onPressed: () {}, child: const Text('u')),
+                  ),
+                  Positioned(
+                    left: 80,
+                    top: 160,
+                    child: TextButton(onPressed: () {}, child: const Text('e')),
+                  ),
+                  Positioned(
+                    left: 75,
+                    top: 180,
+                    child: TextButton(onPressed: () {}, child: const Text('o')),
+                  ),
                 ],
               ),
             ),
