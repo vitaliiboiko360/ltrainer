@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ButtonLetter extends StatefulWidget {
-  const ButtonLetter({super.key, required this.text});
+  const ButtonLetter({super.key, required this.text, required this.onPressed});
 
   final String text;
+  final VoidCallback onPressed;
 
   @override
   State<ButtonLetter> createState() => _ButtonLetterState();
@@ -11,11 +12,31 @@ class ButtonLetter extends StatefulWidget {
 
 class _ButtonLetterState extends State<ButtonLetter> {
   late final WidgetStatesController statesController;
+  bool selected = false;
+
+  static const ButtonStyle style = ButtonStyle(
+    foregroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
+      WidgetState.selected: Colors.white,
+    }),
+    backgroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
+      WidgetState.selected: Colors.indigo,
+    }),
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    statesController = WidgetStatesController(<WidgetState>{
+      if (selected) WidgetState.selected,
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        widget.onPressed();
+      },
       style: TextButton.styleFrom(
         backgroundColor: Color(0xfff2ecf2),
         padding: EdgeInsetsDirectional.only(bottom: 10),
