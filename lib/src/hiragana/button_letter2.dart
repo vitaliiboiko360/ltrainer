@@ -79,7 +79,7 @@ class _ButtonLetter2State extends State<ButtonLetter2> {
       WidgetState.selected: Colors.white,
     }),
     backgroundColor: WidgetStateProperty<Color?>.fromMap({
-      WidgetState.selected: Colors.indigo,
+      WidgetState.selected: const Color.fromARGB(255, 63, 132, 181),
       WidgetState.any: Color(0xfff2ecf2),
     }),
   );
