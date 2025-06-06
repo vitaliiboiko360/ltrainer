@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/button_letter.dart';
-import 'package:ltrainer/src/hiragana/button_letter2.dart';
 
 class ButtonGroup extends StatelessWidget {
   const ButtonGroup({super.key});
@@ -25,9 +24,9 @@ class ButtonGroup extends StatelessWidget {
         Positioned(
           left: 100.0,
           top: _calcTop(0),
-          child: ButtonLetter(text: 'a', onPressed: () {}),
+          child: ButtonLetter(text: 'a'),
         ),
-        Positioned(left: 90, top: _calcTop(1), child: ButtonLetter2(text: 'i')),
+        Positioned(left: 90, top: _calcTop(1), child: ButtonLetter(text: 'i')),
         Positioned(
           left: 85,
           top: _calcTop(2),

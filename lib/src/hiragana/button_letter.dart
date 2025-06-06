@@ -1,75 +1,5 @@
 import 'package:flutter/material.dart';
 
-class ButtonLetter extends StatefulWidget {
-  ButtonLetter({super.key, required this.text, required this.onPressed});
-
-  final String text;
-  final VoidCallback onPressed;
-  bool selected = false;
-
-  @override
-  State<ButtonLetter> createState() => _ButtonLetterState();
-}
-
-class _ButtonLetterState extends State<ButtonLetter> {
-  late final WidgetStatesController statesController;
-
-  ButtonStyle style = ButtonStyle(
-    padding: WidgetStateProperty.resolveWith<EdgeInsetsDirectional?>((
-      Set<WidgetState> states,
-    ) {
-      return EdgeInsetsDirectional.only(bottom: 10);
-    }),
-    shape: WidgetStateProperty.resolveWith<CircleBorder?>((
-      Set<WidgetState> states,
-    ) {
-      return CircleBorder();
-    }),
-    textStyle: WidgetStateProperty.resolveWith<TextStyle?>((
-      Set<WidgetState> states,
-    ) {
-      return TextStyle(fontSize: 22);
-    }),
-    foregroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
-      WidgetState.selected: Colors.white,
-    }),
-    backgroundColor: WidgetStateProperty<Color?>.fromMap({
-      WidgetState.selected: Colors.indigo,
-      WidgetState.any: Color(0xfff2ecf2),
-    }),
-  );
-
-  @override
-  void initState() {
-    super.initState();
-    statesController = WidgetStatesController(<WidgetState>{
-      if (widget.selected) WidgetState.selected,
-    });
-  }
-
-  @override
-  void didUpdateWidget(ButtonLetter oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (widget.selected != oldWidget.selected) {
-      statesController.update(WidgetState.selected, widget.selected);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        setState(() {
-          widget.selected = !widget.selected;
-        });
-        widget.onPressed();
-      },
-      style: style,
-      child: Text(widget.text),
-    );
-  }
-}
-
 class SelectableButton extends StatefulWidget {
   const SelectableButton({
     super.key,
@@ -118,42 +48,53 @@ class _SelectableButtonState extends State<SelectableButton> {
   }
 }
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class ButtonLetter extends StatefulWidget {
+  const ButtonLetter({super.key, required this.text});
+  final String text;
 
   @override
-  State<Home> createState() => _HomeState();
+  State<ButtonLetter> createState() => _ButtonLetterState();
 }
 
-class _HomeState extends State<Home> {
+class _ButtonLetterState extends State<ButtonLetter> {
   bool selected = false;
 
-  /// Sets the button's foreground and background colors.
-  /// If not selected, resolves to null and defers to default values.
-  static const ButtonStyle style = ButtonStyle(
+  static ButtonStyle style = ButtonStyle(
+    padding: WidgetStateProperty.resolveWith<EdgeInsetsDirectional?>((
+      Set<WidgetState> states,
+    ) {
+      return EdgeInsetsDirectional.only(bottom: 10);
+    }),
+    shape: WidgetStateProperty.resolveWith<CircleBorder?>((
+      Set<WidgetState> states,
+    ) {
+      return CircleBorder();
+    }),
+    textStyle: WidgetStateProperty.resolveWith<TextStyle?>((
+      Set<WidgetState> states,
+    ) {
+      return TextStyle(fontSize: 22);
+    }),
     foregroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
       WidgetState.selected: Colors.white,
     }),
-    backgroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
-      WidgetState.selected: Colors.indigo,
+    backgroundColor: WidgetStateProperty<Color?>.fromMap({
+      WidgetState.selected: const Color.fromARGB(255, 63, 132, 181),
+      WidgetState.any: Color(0xfff2ecf2),
     }),
   );
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SelectableButton(
-          selected: selected,
-          style: style,
-          onPressed: () {
-            setState(() {
-              selected = !selected;
-            });
-          },
-          child: const Text('toggle selected'),
-        ),
-      ),
+    return SelectableButton(
+      selected: selected,
+      style: style,
+      onPressed: () {
+        setState(() {
+          selected = !selected;
+        });
+      },
+      child: Text(widget.text),
     );
   }
 }
