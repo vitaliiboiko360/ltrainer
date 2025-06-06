@@ -24,7 +24,7 @@ class ButtonGroup extends StatelessWidget {
         Positioned(
           left: 100.0,
           top: _calcTop(0),
-          child: const ButtonLetter(text: 'a'),
+          child: ButtonLetter(text: 'a', onPressed: () {}),
         ),
         Positioned(
           left: 90,
