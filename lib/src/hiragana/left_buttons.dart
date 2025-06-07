@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/button_letter.dart';
 
-enum Button { a, i, u, e, o }
+enum Button { a, u, i, e, o }
 
 class LeftButtons extends StatefulWidget {
   const LeftButtons({super.key});
@@ -22,7 +22,13 @@ class _LeftButtonsState extends State<LeftButtons> {
     return 100 + (k * 32);
   }
 
-  void onPressed(int k) {
+  void onPressed(int k, int currentSelectedIndex) {
+    if (k == currentSelectedIndex) {
+      setState(() {
+        selectedIndex = -1;
+      });
+      return;
+    }
     setState(() {
       selectedIndex = k;
     });
@@ -38,7 +44,7 @@ class _LeftButtonsState extends State<LeftButtons> {
           child: ButtonLetter(
             text: 'a',
             onPressed: () {
-              onPressed(0);
+              onPressed(0, selectedIndex);
             },
             selected: Button.a.index == selectedIndex,
           ),
@@ -49,7 +55,7 @@ class _LeftButtonsState extends State<LeftButtons> {
           child: ButtonLetter(
             text: 'u',
             onPressed: () {
-              onPressed(1);
+              onPressed(1, selectedIndex);
             },
             selected: Button.u.index == selectedIndex,
           ),
@@ -60,7 +66,7 @@ class _LeftButtonsState extends State<LeftButtons> {
           child: ButtonLetter(
             text: 'i',
             onPressed: () {
-              onPressed(2);
+              onPressed(2, selectedIndex);
             },
             selected: Button.i.index == selectedIndex,
           ),
@@ -71,7 +77,7 @@ class _LeftButtonsState extends State<LeftButtons> {
           child: ButtonLetter(
             text: 'e',
             onPressed: () {
-              onPressed(3);
+              onPressed(3, selectedIndex);
             },
             selected: Button.e.index == selectedIndex,
           ),
@@ -82,7 +88,7 @@ class _LeftButtonsState extends State<LeftButtons> {
           child: ButtonLetter(
             text: 'o',
             onPressed: () {
-              onPressed(4);
+              onPressed(4, selectedIndex);
             },
             selected: Button.o.index == selectedIndex,
           ),
