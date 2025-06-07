@@ -49,16 +49,22 @@ class _SelectableButtonState extends State<SelectableButton> {
 }
 
 class ButtonLetter extends StatefulWidget {
-  const ButtonLetter({super.key, required this.text});
+  ButtonLetter({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    required this.selected,
+  });
+
   final String text;
+  final VoidCallback onPressed;
+  bool selected;
 
   @override
   State<ButtonLetter> createState() => _ButtonLetterState();
 }
 
 class _ButtonLetterState extends State<ButtonLetter> {
-  bool selected = false;
-
   static ButtonStyle style = ButtonStyle(
     padding: WidgetStateProperty.resolveWith<EdgeInsetsDirectional?>((
       Set<WidgetState> states,
@@ -87,12 +93,13 @@ class _ButtonLetterState extends State<ButtonLetter> {
   @override
   Widget build(BuildContext context) {
     return SelectableButton(
-      selected: selected,
+      selected: widget.selected,
       style: style,
       onPressed: () {
         setState(() {
-          selected = !selected;
+          widget.selected = !widget.selected;
         });
+        widget.onPressed();
       },
       child: Text(widget.text),
     );

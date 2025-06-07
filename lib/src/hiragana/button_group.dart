@@ -16,21 +16,20 @@ class ButtonGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        // TextButton(
-        //   onPressed: () {},
-        //   style: TextButton.styleFrom(fixedSize: Size(10, 10)),
-        //   child: const Text('a'),
-        // ),
         Positioned(
           left: 100.0,
           top: _calcTop(0),
-          child: ButtonLetter(text: 'a'),
+          child: ButtonLetter(text: 'a', onPressed: () {}, selected: false),
         ),
-        Positioned(left: 90, top: _calcTop(1), child: ButtonLetter(text: 'i')),
+        Positioned(
+          left: 90,
+          top: _calcTop(1),
+          child: ButtonLetter(text: 'u', onPressed: () {}, selected: false),
+        ),
         Positioned(
           left: 85,
           top: _calcTop(2),
-          child: TextButton(onPressed: () {}, child: const Text('u')),
+          child: TextButton(onPressed: () {}, child: const Text('i')),
         ),
         Positioned(
           left: 80,
