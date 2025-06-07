@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/button_letter.dart';
 
-class ButtonGroup extends StatelessWidget {
+class ButtonGroup extends StatefulWidget {
   const ButtonGroup({super.key});
+
+  @override
+  State<ButtonGroup> createState() => _ButtonGroupState();
+}
+
+class _ButtonGroupState extends State<ButtonGroup> {
+  int selectedIndex = -1;
 
   double _getLeft(int k) {
     return 0;
@@ -12,6 +19,12 @@ class ButtonGroup extends StatelessWidget {
     return 100 + (k * 30);
   }
 
+  void onPressed(int k) {
+    setState(() {
+      selectedIndex = k;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -19,12 +32,24 @@ class ButtonGroup extends StatelessWidget {
         Positioned(
           left: 100.0,
           top: _calcTop(0),
-          child: ButtonLetter(text: 'a', onPressed: () {}, selected: false),
+          child: ButtonLetter(
+            text: 'a',
+            onPressed: () {
+              onPressed(0);
+            },
+            selected: 0 == selectedIndex,
+          ),
         ),
         Positioned(
           left: 90,
           top: _calcTop(1),
-          child: ButtonLetter(text: 'u', onPressed: () {}, selected: false),
+          child: ButtonLetter(
+            text: 'u',
+            onPressed: () {
+              onPressed(1);
+            },
+            selected: 1 == selectedIndex,
+          ),
         ),
         Positioned(
           left: 85,
