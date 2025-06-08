@@ -4,7 +4,9 @@ import 'package:ltrainer/src/hiragana/button_letter.dart';
 enum Button { a, u, i, e, o }
 
 class LeftButtons extends StatefulWidget {
-  const LeftButtons({super.key});
+  const LeftButtons({super.key, required this.setCharacterToShow});
+
+  final Function(int) setCharacterToShow;
 
   @override
   State<LeftButtons> createState() => _LeftButtonsState();
@@ -26,11 +28,13 @@ class _LeftButtonsState extends State<LeftButtons> {
     if (k == currentSelectedIndex) {
       setState(() {
         selectedIndex = -1;
+        widget.setCharacterToShow(-1);
       });
       return;
     }
     setState(() {
       selectedIndex = k;
+      widget.setCharacterToShow(k);
     });
   }
 
