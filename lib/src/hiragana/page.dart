@@ -19,9 +19,9 @@ class _MyHomePageState extends State<HiraganaPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              color: Colors.grey.shade100,
+              // color: Colors.grey.shade100,
               width: 400,
-              height: 400,
+              height: 600,
               child: ButtonGroup(),
             ),
           ],
