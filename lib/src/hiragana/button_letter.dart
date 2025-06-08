@@ -105,3 +105,61 @@ class _ButtonLetterState extends State<ButtonLetter> {
     );
   }
 }
+
+class ButtonChild extends StatefulWidget {
+  ButtonChild({
+    super.key,
+    required this.child,
+    required this.onPressed,
+    required this.selected,
+  });
+
+  final Widget child;
+  final VoidCallback onPressed;
+  bool selected;
+
+  @override
+  State<ButtonChild> createState() => _ButtonChildState();
+}
+
+class _ButtonChildState extends State<ButtonChild> {
+  static ButtonStyle style = ButtonStyle(
+    padding: WidgetStateProperty.resolveWith<EdgeInsetsDirectional?>((
+      Set<WidgetState> states,
+    ) {
+      return EdgeInsetsDirectional.only(bottom: 10);
+    }),
+    shape: WidgetStateProperty.resolveWith<CircleBorder?>((
+      Set<WidgetState> states,
+    ) {
+      return CircleBorder();
+    }),
+    textStyle: WidgetStateProperty.resolveWith<TextStyle?>((
+      Set<WidgetState> states,
+    ) {
+      return TextStyle(fontSize: 22);
+    }),
+    foregroundColor: WidgetStateProperty<Color?>.fromMap(<WidgetState, Color>{
+      WidgetState.selected: Colors.white,
+    }),
+    backgroundColor: WidgetStateProperty<Color?>.fromMap({
+      WidgetState.selected: const Color.fromARGB(255, 63, 132, 181),
+      WidgetState.any: Color(0xfff2ecf2),
+    }),
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectableButton(
+      selected: widget.selected,
+      style: style,
+      onPressed: () {
+        setState(() {
+          widget.selected = !widget.selected;
+        });
+        widget.onPressed();
+      },
+      child: widget.child,
+    );
+  }
+}
