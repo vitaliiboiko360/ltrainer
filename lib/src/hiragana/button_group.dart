@@ -24,7 +24,7 @@ class _ButtonGroupState extends State<ButtonGroup> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        LeftButtons(),
+        LeftButtons(setCharacterToShow: setCharacterToShow),
         RightButtons(),
         DisplayLetter(characterToShow: characterToShow),
       ],
