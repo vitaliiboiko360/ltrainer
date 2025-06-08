@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/hiragana/video_player.dart';
 
 const noShow = -1;
 
@@ -15,7 +16,9 @@ class _DisplayLetterState extends State<DisplayLetter> {
   int characterToShow = noShow;
 
   _getDisplay() {
-    if (widget.characterToShow != noShow) {}
+    if (widget.characterToShow != noShow) {
+      return VideoPlayerScreen();
+    }
     return Image(height: 250, width: 250, image: AssetImage('bg.png'));
   }
 
