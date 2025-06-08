@@ -15,11 +15,11 @@ class _LeftButtonsState extends State<LeftButtons> {
 
   double _getLeft(int k) {
     // return (50 - 1 / ((k * k) - 0.5)).toDouble();
-    return 20;
+    return 10;
   }
 
   double _calcTop(int k) {
-    return 100 + (k * 32);
+    return 100 + (k * 35);
   }
 
   void onPressed(int k, int currentSelectedIndex) {
