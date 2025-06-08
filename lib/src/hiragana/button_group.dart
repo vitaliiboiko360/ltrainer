@@ -12,7 +12,13 @@ class ButtonGroup extends StatefulWidget {
 }
 
 class _ButtonGroupState extends State<ButtonGroup> {
-  int leftButtonSelectedCharacter = notSelected;
+  int characterToShow = notSelected;
+
+  setCharacterToShow(int k) {
+    setState(() {
+      characterToShow = k;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,7 @@ class _ButtonGroupState extends State<ButtonGroup> {
       children: <Widget>[
         LeftButtons(),
         RightButtons(),
-        DisplayLetter(characterToShow: leftButtonSelectedCharacter),
+        DisplayLetter(characterToShow: characterToShow),
       ],
     );
   }
