@@ -17,7 +17,7 @@ class _DisplayLetterState extends State<DisplayLetter> {
 
   _getDisplay() {
     if (widget.characterToShow != noShow) {
-      return VideoPlayerScreen();
+      return SizedBox(height: 250, width: 250, child: VideoPlayerScreen());
     }
     return Image(height: 250, width: 250, image: AssetImage('bg.png'));
   }
