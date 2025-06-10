@@ -43,7 +43,6 @@ class _DisplayLetterState extends State<DisplayLetter> {
   void didUpdateWidget(DisplayLetter oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.videoFilename != oldWidget.videoFilename) {
-      print('STTTTTTATE');
       setState(() {
         videoFilename = widget.videoFilename;
       });

@@ -45,7 +45,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   void didUpdateWidget(VideoPlayerScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.videoFilename != oldWidget.videoFilename) {
-      print('VIDEOOOOO');
       setState(() {
         videoFilename = widget.videoFilename;
         isFirstTimePlay = true;
