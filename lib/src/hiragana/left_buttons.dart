@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/button_letter.dart';
 
-enum Button { a, u, i, e, o }
+enum LeftButton { a, u, i, e, o }
 
 class LeftButtons extends StatefulWidget {
   const LeftButtons({super.key, required this.setCharacterToShow});
@@ -50,7 +50,7 @@ class _LeftButtonsState extends State<LeftButtons> {
             onPressed: () {
               onPressed(0, selectedIndex);
             },
-            selected: Button.a.index == selectedIndex,
+            selected: LeftButton.a.index == selectedIndex,
           ),
         ),
         Positioned(
@@ -61,7 +61,7 @@ class _LeftButtonsState extends State<LeftButtons> {
             onPressed: () {
               onPressed(1, selectedIndex);
             },
-            selected: Button.u.index == selectedIndex,
+            selected: LeftButton.u.index == selectedIndex,
           ),
         ),
         Positioned(
@@ -72,7 +72,7 @@ class _LeftButtonsState extends State<LeftButtons> {
             onPressed: () {
               onPressed(2, selectedIndex);
             },
-            selected: Button.i.index == selectedIndex,
+            selected: LeftButton.i.index == selectedIndex,
           ),
         ),
         Positioned(
@@ -83,7 +83,7 @@ class _LeftButtonsState extends State<LeftButtons> {
             onPressed: () {
               onPressed(3, selectedIndex);
             },
-            selected: Button.e.index == selectedIndex,
+            selected: LeftButton.e.index == selectedIndex,
           ),
         ),
         Positioned(
@@ -94,7 +94,7 @@ class _LeftButtonsState extends State<LeftButtons> {
             onPressed: () {
               onPressed(4, selectedIndex);
             },
-            selected: Button.o.index == selectedIndex,
+            selected: LeftButton.o.index == selectedIndex,
           ),
         ),
       ],
