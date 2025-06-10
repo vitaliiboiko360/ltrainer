@@ -14,6 +14,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   late VideoPlayerController _controller;
   late Future<void> _initializeVideoPlayerFuture;
 
+  bool isFirstTimePlay = true;
+
   @override
   void initState() {
     super.initState();
@@ -56,6 +58,10 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           future: _initializeVideoPlayerFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
+              if (isFirstTimePlay) {
+                _controller.play();
+                isFirstTimePlay = false;
+              }
               return AspectRatio(
                 aspectRatio: _controller.value.aspectRatio,
                 child: IgnorePointer(child: VideoPlayer(_controller)),
