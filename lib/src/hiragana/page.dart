@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/back_home.dart';
 import 'package:ltrainer/src/hiragana/button_group.dart';
 
 class HiraganaPage extends StatefulWidget {
@@ -18,6 +19,10 @@ class _MyHomePageState extends State<HiraganaPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Container(
+              transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
+              child: BackHome(),
+            ),
             Container(
               // color: Colors.grey.shade100,
               width: 400,
