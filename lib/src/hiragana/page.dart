@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ltrainer/src/back_home.dart';
 import 'package:ltrainer/src/hiragana/button_group.dart';
 import 'package:ltrainer/src/hiragana/draw_letter.dart';
+import 'package:ltrainer/src/hiragana/hiragana_table.dart';
 import 'package:scribble/scribble.dart';
 
 class HiraganaPage extends StatefulWidget {
@@ -37,6 +38,7 @@ class _MyHomePageState extends State<HiraganaPage> {
                 height: 350,
                 child: DrawLetter(title: 'Practice Write'),
               ),
+              SizedBox(width: 400, height: 100, child: HiraganaTable()),
             ],
           ),
         ),
