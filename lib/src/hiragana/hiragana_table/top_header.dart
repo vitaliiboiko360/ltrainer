@@ -18,6 +18,27 @@ class _TopHeaderState extends State<TopHeader> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[Text('$_counter')]);
+    return Row(
+      spacing: 50.0,
+
+      children: <Widget>[
+        LetterHeader(text: 'a'),
+        LetterHeader(text: 'i'),
+        LetterHeader(text: 'u'),
+        LetterHeader(text: 'e'),
+        LetterHeader(text: 'o'),
+      ],
+    );
+  }
+}
+
+class LetterHeader extends StatelessWidget {
+  const LetterHeader({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text, style: TextStyle(fontFamily: 'Nunito', fontSize: 30));
   }
 }
