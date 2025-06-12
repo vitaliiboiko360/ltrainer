@@ -27,6 +27,8 @@ class _HomePageState extends State<DrawLetter> {
         automaticallyImplyLeading: false,
         title: Text(widget.title),
         actions: _buildActions(context),
+        centerTitle: true,
+        actionsPadding: EdgeInsetsGeometry.directional(end: 140),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 64),
