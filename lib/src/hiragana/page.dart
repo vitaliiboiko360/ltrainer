@@ -17,26 +17,28 @@ class _MyHomePageState extends State<HiraganaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
-              child: BackHome(),
-            ),
-            Container(
-              // color: Colors.grey.shade100,
-              width: 400,
-              height: 600,
-              child: ButtonGroup(),
-            ),
-            SizedBox(
-              width: 400,
-              height: 350,
-              child: DrawLetter(title: 'Practice'),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
+                child: BackHome(),
+              ),
+              Container(
+                // color: Colors.grey.shade100,
+                width: 400,
+                height: 600,
+                child: ButtonGroup(),
+              ),
+              SizedBox(
+                width: 400,
+                height: 350,
+                child: DrawLetter(title: 'Write'),
+              ),
+            ],
+          ),
         ),
       ),
     );
