@@ -18,6 +18,13 @@ class _HiraganaTableState extends State<HiraganaTable> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[Text('$_counter')]);
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[],
+        ),
+      ),
+    );
   }
 }
