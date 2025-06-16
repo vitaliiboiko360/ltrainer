@@ -5,19 +5,15 @@ import 'package:ltrainer/src/tile_button.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
-  final String title = 'why Flutter Demo Home Page local';
+  final String title = 'Nihongo App';
 
   @override
   State<HomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _goToKatakana() {
+    Navigator.pushNamed(context, '/katakana');
   }
 
   void _goToHiragana() {
@@ -28,6 +24,7 @@ class _MyHomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
@@ -35,17 +32,20 @@ class _MyHomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            TileButton(onPressed: _goToHiragana, name: 'Hiragana'),
-            TileButton(onPressed: _incrementCounter, name: 'Katakana'),
             Line(),
             const Text(
-              'You have clicked the button this many times:',
+              'Basics:',
               style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
             ),
+            Line(),
+            TileButton(onPressed: _goToHiragana, name: 'Hiragana'),
+            TileButton(onPressed: _goToKatakana, name: 'Katakana'),
+            Line(),
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              'Most common Kanji word practice:',
+              style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
             ),
+            Line(),
           ],
         ),
       ),
