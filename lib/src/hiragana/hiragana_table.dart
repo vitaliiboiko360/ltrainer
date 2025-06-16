@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/hiragana/hiragana_table/table_line.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/top_header.dart';
 
 class HiraganaTable extends StatefulWidget {
@@ -15,7 +16,10 @@ class _HiraganaTableState extends State<HiraganaTable> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[TopHeader()],
+          children: <Widget>[
+            TopHeader(),
+            TableLine(charArray: ['あ', 'い', 'う', 'え', 'お']),
+          ],
         ),
       ),
     );

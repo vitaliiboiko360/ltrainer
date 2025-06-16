@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/hiragana/hiragana_table/hiragana_letter.dart';
 
-class TableLIne extends StatefulWidget {
-  const TableLIne({super.key});
-
+class TableLine extends StatefulWidget {
+  const TableLine({super.key, required this.charArray});
+  final List<String> charArray;
   @override
-  State<TableLIne> createState() => _TableLIneState();
+  State<TableLine> createState() => _TableLineState();
 }
 
-class _TableLIneState extends State<TableLIne> {
+class _TableLineState extends State<TableLine> {
+  List<Widget> _getLineWidgets() {
+    List<Widget> lineWidgets = [];
+    widget.charArray.forEach((char) {
+      lineWidgets.add(HiraganaLetter(letter: char));
+    });
+
+    return lineWidgets;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[Text('')]);
+    return Row(children: _getLineWidgets());
   }
 }

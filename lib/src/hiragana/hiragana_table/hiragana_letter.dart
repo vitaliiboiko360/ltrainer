@@ -15,11 +15,24 @@ class _HiraganaLetterState extends State<HiraganaLetter> {
     return Container(
       width: 60,
       height: 60,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
+        color: Colors.white,
         border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withValues(alpha: 0.5),
+            offset: Offset(4, 4),
+            blurRadius: 8,
+          ),
+        ],
       ),
-      child: Text(widget.letter),
+      child: Text(
+        widget.letter,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 26),
+      ),
     );
   }
 }
