@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/hiragana_letter.dart';
 
+final class Hiragana {
+  String letter;
+  String sound;
+  Hiragana(this.letter, this.sound);
+}
+
+List<Hiragana> makeHiraganaArray(List<String> inputArray) {
+  List<Hiragana> hiraganaArray = [];
+  for (var i = 0; i < inputArray.length; i += 2) {
+    hiraganaArray.add(Hiragana(inputArray[i], inputArray[i + 1]));
+  }
+  return hiraganaArray;
+}
+
 class TableLine extends StatefulWidget {
-  const TableLine({super.key, required this.charArray});
-  final List<String> charArray;
+  const TableLine({super.key, required this.hiraganaArray});
+  final List<Hiragana> hiraganaArray;
   @override
   State<TableLine> createState() => _TableLineState();
 }
@@ -11,8 +25,10 @@ class TableLine extends StatefulWidget {
 class _TableLineState extends State<TableLine> {
   List<Widget> _getLineWidgets() {
     List<Widget> lineWidgets = [];
-    widget.charArray.forEach((char) {
-      lineWidgets.add(HiraganaLetter(letter: char));
+    widget.hiraganaArray.forEach((hiraganaChar) {
+      lineWidgets.add(
+        HiraganaLetter(letter: hiraganaChar.letter, sound: hiraganaChar.sound),
+      );
     });
 
     return lineWidgets;
