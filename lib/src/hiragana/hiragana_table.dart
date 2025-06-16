@@ -9,14 +9,6 @@ class HiraganaTable extends StatefulWidget {
 }
 
 class _HiraganaTableState extends State<HiraganaTable> {
-  int _counter = 0;
-
-  void _increment() {
-    setState(() {
-      ++_counter;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
