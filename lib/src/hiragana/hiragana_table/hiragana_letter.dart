@@ -31,7 +31,7 @@ class _HiraganaLetterState extends State<HiraganaLetter> {
       child: Text(
         widget.letter,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 26),
+        style: TextStyle(fontSize: 30),
       ),
     );
   }

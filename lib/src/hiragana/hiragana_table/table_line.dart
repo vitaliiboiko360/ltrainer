@@ -20,6 +20,6 @@ class _TableLineState extends State<TableLine> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: _getLineWidgets());
+    return Row(spacing: 4, children: _getLineWidgets());
   }
 }

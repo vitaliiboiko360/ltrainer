@@ -16,9 +16,11 @@ class _HiraganaTableState extends State<HiraganaTable> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          spacing: 6,
           children: <Widget>[
             TopHeader(),
             TableLine(charArray: ['あ', 'い', 'う', 'え', 'お']),
+            TableLine(charArray: ['か', 'き', 'く', 'け', 'こ']),
           ],
         ),
       ),
