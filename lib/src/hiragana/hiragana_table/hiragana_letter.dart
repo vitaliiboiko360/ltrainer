@@ -12,6 +12,14 @@ class HiraganaLetter extends StatefulWidget {
 class _HiraganaLetterState extends State<HiraganaLetter> {
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[Text(widget.letter)]);
+    return Container(
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(widget.letter),
+    );
   }
 }
