@@ -15,7 +15,7 @@ class _HiraganaLetterState extends State<HiraganaLetter> {
   Widget build(BuildContext context) {
     return Container(
       width: 60,
-      height: 60,
+      height: 70,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -37,7 +37,7 @@ class _HiraganaLetterState extends State<HiraganaLetter> {
           Text(
             widget.sound,
             textAlign: TextAlign.start,
-            style: TextStyle(fontSize: 14, height: 0.6),
+            style: TextStyle(fontSize: 12, height: 0.8),
           ),
           Text(
             widget.letter,
