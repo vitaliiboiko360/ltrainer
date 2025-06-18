@@ -190,23 +190,6 @@ class _HiraganaTableState extends State<HiraganaTable> {
             ),
             Divider(indent: 35, endIndent: 45, thickness: 0.4),
             SoundBlock(
-              sound: 'b',
-              hiraganaArray: [
-                'ば',
-                'ba',
-                'び',
-                'bi',
-                'ぶ',
-                'bu',
-                'べ',
-                'be',
-                'ぼ',
-                'bo',
-              ],
-              hiraganaArraySecond: ['びゃ', 'bya', 'びゅ', 'byu', 'びょ', 'byo'],
-            ),
-            Divider(indent: 35, endIndent: 45, thickness: 0.4),
-            SoundBlock(
               sound: 'p',
               hiraganaArray: [
                 'ぱ',
