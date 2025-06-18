@@ -21,7 +21,12 @@ class _SoundBlockState extends State<SoundBlock> {
     return Row(
       spacing: 20,
       children: <Widget>[
-        Column(children: [Text(widget.sound, style: TextStyle(fontSize: 30))]),
+        SizedBox(
+          width: 15,
+          child: Column(
+            children: [Text(widget.sound, style: TextStyle(fontSize: 30))],
+          ),
+        ),
         Column(
           spacing: 4,
           children: [
