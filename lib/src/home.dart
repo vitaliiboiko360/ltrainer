@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ltrainer/src/line.dart';
-import 'package:ltrainer/src/tile_button.dart';
+import 'package:ltrainer/src/home/line.dart';
+import 'package:ltrainer/src/home/tile_buttons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
