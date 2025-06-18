@@ -25,7 +25,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               hiraganaArray: ['あ', 'a', 'い', 'i', 'う', 'u', 'え', 'e', 'お', 'o'],
               hiraganaArraySecond: ['や', 'ya', 'ゆ', 'yu', 'よ', 'yo'],
             ),
-            Divider(endIndent: 40),
+            Divider(indent: 30, endIndent: 40),
             SoundBlock(
               sound: 'k',
               hiraganaArray: [
@@ -42,13 +42,14 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['きゃ', 'kya', 'きゅ', 'kyu', 'きょ', 'kyo'],
             ),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
             SoundBlock(
               sound: 'g',
               hiraganaArray: [
                 'が',
                 'ga',
                 'ぎ',
-                'gi,',
+                'gi',
                 'ぐ',
                 'gu',
                 'げ',
@@ -58,7 +59,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['ぎゃ', 'gya', 'ぎゅ', 'gyu', 'ぎょ', 'gyo'],
             ),
-            Divider(endIndent: 40),
+            Divider(indent: 30, endIndent: 40),
             SoundBlock(
               sound: 's',
               hiraganaArray: [
@@ -73,8 +74,9 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 'そ',
                 'so',
               ],
+              hiraganaArraySecond: ['しゃ', 'sha', 'しゅ', 'shu', 'しょ', 'sho'],
             ),
-            Divider(endIndent: 40),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
             SoundBlock(
               sound: 'z',
               hiraganaArray: [
@@ -89,8 +91,9 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 'ぞ',
                 'zo',
               ],
+              hiraganaArraySecond: ['じゃ', 'ja', 'じゅ', 'ju', 'じょ', 'jo'],
             ),
-            Divider(endIndent: 40),
+            Divider(indent: 30, endIndent: 40),
             SoundBlock(
               sound: 't',
               hiraganaArray: [
@@ -105,7 +108,26 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 'と',
                 'to',
               ],
+              hiraganaArraySecond: ['ちゃ', 'cha', 'ちゅ', 'chu', 'ちょ', 'cho'],
             ),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
+            SoundBlock(
+              sound: 'd',
+              hiraganaArray: [
+                'だ',
+                'da',
+                'ぢ',
+                'ji',
+                'づ',
+                'zu',
+                'で',
+                'de',
+                'ど',
+                'do',
+              ],
+              hiraganaArraySecond: [],
+            ),
+            Divider(indent: 30, endIndent: 40),
           ],
         ),
       ),
