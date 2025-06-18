@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/hiragana/hiragana_table/sound_block.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/table_line.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/top_header.dart';
 
@@ -19,22 +20,15 @@ class _HiraganaTableState extends State<HiraganaTable> {
           spacing: 6,
           children: <Widget>[
             TopHeader(),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
-                'あ',
-                'a',
-                'い',
-                'i',
-                'う',
-                'u',
-                'え',
-                'e',
-                'お',
-                'o',
-              ]),
+            SoundBlock(
+              sound: 'a',
+              hiraganaArray: ['あ', 'a', 'い', 'i', 'う', 'u', 'え', 'e', 'お', 'o'],
+              hiraganaArraySecond: ['や', 'ya', 'ゆ', 'yu', 'よ', 'yo'],
             ),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
+            Divider(endIndent: 40),
+            SoundBlock(
+              sound: 'k',
+              hiraganaArray: [
                 'か',
                 'ka',
                 'き',
@@ -45,64 +39,67 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 'ke',
                 'こ',
                 'ko',
-              ]),
+              ],
+              hiraganaArraySecond: ['きゃ', 'kya', 'きゅ', 'kyu', 'きょ', 'kyo'],
             ),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
-                'が',
-                'ga',
-                'ぎ',
-                'gi,',
-                'ぐ',
-                'gu',
-                'げ',
-                'ge',
-                'ご',
-                'go',
-              ]),
-            ),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
-                'さ',
-                'sa',
-                'し',
-                'shi',
-                'す',
-                'su',
-                'せ',
-                'se',
-                'そ',
-                'so',
-              ]),
-            ),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
-                'ざ',
-                'za',
-                'じ',
-                'ji',
-                'ず',
-                'zu',
-                'ぜ',
-                'ze',
-                'ぞ',
-                'zo',
-              ]),
-            ),
-            TableLine(
-              hiraganaArray: makeHiraganaArray([
-                'た',
-                'ta',
-                'ち',
-                'chi',
-                'つ',
-                'tsu',
-                'て',
-                'te',
-                'と',
-                'to',
-              ]),
-            ),
+            Divider(endIndent: 40),
+            // TableLine(hiraganaArray: makeHiraganaArray()),
+            // TableLine(hiraganaArray: makeHiraganaArray()),
+            // TableLine(
+            //   hiraganaArray: makeHiraganaArray([
+            //     'が',
+            //     'ga',
+            //     'ぎ',
+            //     'gi,',
+            //     'ぐ',
+            //     'gu',
+            //     'げ',
+            //     'ge',
+            //     'ご',
+            //     'go',
+            //   ]),
+            // ),
+            // TableLine(
+            //   hiraganaArray: makeHiraganaArray([
+            //     'さ',
+            //     'sa',
+            //     'し',
+            //     'shi',
+            //     'す',
+            //     'su',
+            //     'せ',
+            //     'se',
+            //     'そ',
+            //     'so',
+            //   ]),
+            // ),
+            // TableLine(
+            //   hiraganaArray: makeHiraganaArray([
+            //     'ざ',
+            //     'za',
+            //     'じ',
+            //     'ji',
+            //     'ず',
+            //     'zu',
+            //     'ぜ',
+            //     'ze',
+            //     'ぞ',
+            //     'zo',
+            //   ]),
+            // ),
+            // TableLine(
+            //   hiraganaArray: makeHiraganaArray([
+            //     'た',
+            //     'ta',
+            //     'ち',
+            //     'chi',
+            //     'つ',
+            //     'tsu',
+            //     'て',
+            //     'te',
+            //     'と',
+            //     'to',
+            //   ]),
           ],
         ),
       ),
