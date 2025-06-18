@@ -10,16 +10,19 @@ class TopHeader extends StatefulWidget {
 class _TopHeaderState extends State<TopHeader> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      spacing: 50.0,
+    return Padding(
+      padding: EdgeInsets.only(left: 58),
+      child: Row(
+        spacing: 54.0,
 
-      children: <Widget>[
-        LetterHeader(text: 'a'),
-        LetterHeader(text: 'i'),
-        LetterHeader(text: 'u'),
-        LetterHeader(text: 'e'),
-        LetterHeader(text: 'o'),
-      ],
+        children: <Widget>[
+          LetterHeader(text: 'a'),
+          LetterHeader(text: 'i'),
+          LetterHeader(text: 'u'),
+          LetterHeader(text: 'e'),
+          LetterHeader(text: 'o'),
+        ],
+      ),
     );
   }
 }
@@ -31,6 +34,12 @@ class LetterHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: TextStyle(fontFamily: 'Nunito', fontSize: 30));
+    return SizedBox(
+      width: 10,
+      child: Align(
+        alignment: Alignment.center,
+        child: Text(text, style: TextStyle(fontFamily: 'Nunito', fontSize: 30)),
+      ),
+    );
   }
 }
