@@ -282,7 +282,14 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 ),
                 Column(
                   children: [
-                    Row(children: [HiraganaLetter(letter: 'ん', sound: 'n/m')]),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 128),
+                          child: HiraganaLetter(letter: 'ん', sound: 'n/m'),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ],
