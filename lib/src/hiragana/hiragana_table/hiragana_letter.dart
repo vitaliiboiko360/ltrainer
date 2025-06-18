@@ -37,12 +37,16 @@ class _HiraganaLetterState extends State<HiraganaLetter> {
           Text(
             widget.sound,
             textAlign: TextAlign.start,
-            style: TextStyle(fontSize: 12, height: 0.8),
+            style: TextStyle(
+              fontSize: 12,
+              height: 0.8,
+              color: Colors.grey.withValues(alpha: 0.5),
+            ),
           ),
           Text(
             widget.letter,
             textAlign: TextAlign.start,
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 30, letterSpacing: -5),
           ),
         ],
       ),

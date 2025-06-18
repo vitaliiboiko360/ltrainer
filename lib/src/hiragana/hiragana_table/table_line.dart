@@ -16,16 +16,16 @@ List<Hiragana> makeHiraganaArray(List<String> inputArray) {
 }
 
 class TableLine extends StatefulWidget {
-  const TableLine({super.key, required this.hiraganaArray});
-  final List<Hiragana> hiraganaArray;
+  const TableLine({super.key, required this.charArray});
+  final List<String> charArray;
   @override
   State<TableLine> createState() => _TableLineState();
 }
 
 class _TableLineState extends State<TableLine> {
-  List<Widget> _getLineWidgets() {
+  List<Widget> _getLineWidgets(List<Hiragana> hiraganaArray) {
     List<Widget> lineWidgets = [];
-    widget.hiraganaArray.forEach((hiraganaChar) {
+    hiraganaArray.forEach((hiraganaChar) {
       lineWidgets.add(
         HiraganaLetter(letter: hiraganaChar.letter, sound: hiraganaChar.sound),
       );
@@ -36,6 +36,34 @@ class _TableLineState extends State<TableLine> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(spacing: 4, children: _getLineWidgets());
+    return Row(
+      spacing: 4,
+      children: _getLineWidgets(makeHiraganaArray(widget.charArray)),
+    );
+  }
+}
+
+class TableLineSecond extends StatelessWidget {
+  const TableLineSecond({super.key, required this.charArray});
+
+  final List<String> charArray;
+
+  List<Widget> _getLineWidgets(List<Hiragana> charArray) {
+    List<Widget> lineWidgets = [];
+    charArray.forEach((hiraganaChar) {
+      lineWidgets.add(
+        HiraganaLetter(letter: hiraganaChar.letter, sound: hiraganaChar.sound),
+      );
+    });
+
+    return lineWidgets;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      spacing: 68,
+      children: _getLineWidgets(makeHiraganaArray(charArray)),
+    );
   }
 }

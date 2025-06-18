@@ -8,14 +8,6 @@ class TopHeader extends StatefulWidget {
 }
 
 class _TopHeaderState extends State<TopHeader> {
-  int _counter = 0;
-
-  void _increment() {
-    setState(() {
-      ++_counter;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
