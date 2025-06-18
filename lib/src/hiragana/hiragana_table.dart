@@ -4,6 +4,15 @@ import 'package:ltrainer/src/hiragana/hiragana_table/sound_block.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/table_line.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/top_header.dart';
 
+class DividerBetweenSimilar extends StatelessWidget {
+  const DividerBetweenSimilar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Divider(height: 50, indent: 30, endIndent: 40);
+  }
+}
+
 class HiraganaTable extends StatefulWidget {
   const HiraganaTable({super.key});
 
@@ -26,7 +35,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               hiraganaArray: ['あ', 'a', 'い', 'i', 'う', 'u', 'え', 'e', 'お', 'o'],
               hiraganaArraySecond: ['や', 'ya', 'ゆ', 'yu', 'よ', 'yo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 'k',
               hiraganaArray: [
@@ -60,7 +69,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['ぎゃ', 'gya', 'ぎゅ', 'gyu', 'ぎょ', 'gyo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 's',
               hiraganaArray: [
@@ -94,7 +103,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['じゃ', 'ja', 'じゅ', 'ju', 'じょ', 'jo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 't',
               hiraganaArray: [
@@ -128,7 +137,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: [],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 'n',
               hiraganaArray: [
@@ -145,7 +154,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['にゃ', 'nya', 'にゅ', 'nyu', 'にょ', 'nyo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 'h',
               hiraganaArray: [
@@ -213,7 +222,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['ぴゃ', 'pya', 'ぴゅ', 'pyu', 'ぴょ', 'pyo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 'm',
               hiraganaArray: [
@@ -230,7 +239,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['みゃ', 'mya', 'みゅ', 'myu', 'みょ', 'myo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             SoundBlock(
               sound: 'r',
               hiraganaArray: [
@@ -247,7 +256,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
               ],
               hiraganaArraySecond: ['りゃ', 'rya', 'りゅ', 'ryu', 'りょ', 'ryo'],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             Row(
               spacing: 20,
               children: <Widget>[
@@ -270,7 +279,7 @@ class _HiraganaTableState extends State<HiraganaTable> {
                 ),
               ],
             ),
-            Divider(indent: 30, endIndent: 40),
+            DividerBetweenSimilar(),
             Row(
               spacing: 20,
               children: <Widget>[
