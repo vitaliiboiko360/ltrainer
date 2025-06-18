@@ -38,7 +38,7 @@ class _MyHomePageState extends State<HiraganaPage> {
                 height: 350,
                 child: DrawLetter(title: 'Practice Write'),
               ),
-              SizedBox(width: 400, height: 2800, child: HiraganaTable()),
+              SizedBox(width: 400, height: 3200, child: HiraganaTable()),
             ],
           ),
         ),
