@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/hiragana/hiragana_table/hiragana_letter.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/sound_block.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/table_line.dart';
 import 'package:ltrainer/src/hiragana/hiragana_table/top_header.dart';
@@ -128,6 +129,164 @@ class _HiraganaTableState extends State<HiraganaTable> {
               hiraganaArraySecond: [],
             ),
             Divider(indent: 30, endIndent: 40),
+            SoundBlock(
+              sound: 'n',
+              hiraganaArray: [
+                'な',
+                'na',
+                'に',
+                'ni',
+                'ぬ',
+                'nu',
+                'ね',
+                'ne',
+                'の',
+                'no',
+              ],
+              hiraganaArraySecond: ['にゃ', 'nya', 'にゅ', 'nyu', 'にょ', 'nyo'],
+            ),
+            Divider(indent: 30, endIndent: 40),
+            SoundBlock(
+              sound: 'h',
+              hiraganaArray: [
+                'は',
+                'ha',
+                'ひ',
+                'hi',
+                'ふ',
+                'fu',
+                'へ',
+                'he',
+                'ほ',
+                'ho',
+              ],
+              hiraganaArraySecond: ['ひゃ', 'hya', 'ひゅ', 'hyu', 'ひょ', 'hyo'],
+            ),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
+            SoundBlock(
+              sound: 'b',
+              hiraganaArray: [
+                'ば',
+                'ba',
+                'び',
+                'bi',
+                'ぶ',
+                'bu',
+                'べ',
+                'be',
+                'ぼ',
+                'bo',
+              ],
+              hiraganaArraySecond: ['びゃ', 'bya', 'びゅ', 'byu', 'びょ', 'byo'],
+            ),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
+            SoundBlock(
+              sound: 'b',
+              hiraganaArray: [
+                'ば',
+                'ba',
+                'び',
+                'bi',
+                'ぶ',
+                'bu',
+                'べ',
+                'be',
+                'ぼ',
+                'bo',
+              ],
+              hiraganaArraySecond: ['びゃ', 'bya', 'びゅ', 'byu', 'びょ', 'byo'],
+            ),
+            Divider(indent: 35, endIndent: 45, thickness: 0.4),
+            SoundBlock(
+              sound: 'p',
+              hiraganaArray: [
+                'ぱ',
+                'pa',
+                'ぴ',
+                'pi',
+                'ぷ',
+                'pu',
+                'ぺ',
+                'pe',
+                'ぽ',
+                'po',
+              ],
+              hiraganaArraySecond: ['ぴゃ', 'pya', 'ぴゅ', 'pyu', 'ぴょ', 'pyo'],
+            ),
+            Divider(indent: 30, endIndent: 40),
+            SoundBlock(
+              sound: 'm',
+              hiraganaArray: [
+                'ま',
+                'ma',
+                'み',
+                'mi',
+                'む',
+                'mu',
+                'め',
+                'me',
+                'も',
+                'mo',
+              ],
+              hiraganaArraySecond: ['みゃ', 'mya', 'みゅ', 'myu', 'みょ', 'myo'],
+            ),
+            Divider(indent: 30, endIndent: 40),
+            SoundBlock(
+              sound: 'r',
+              hiraganaArray: [
+                'ら',
+                'ra',
+                'り',
+                'ri',
+                'る',
+                'ru',
+                'れ',
+                're',
+                'ろ',
+                'ro',
+              ],
+              hiraganaArraySecond: ['りゃ', 'rya', 'りゅ', 'ryu', 'りょ', 'ryo'],
+            ),
+            Divider(indent: 30, endIndent: 40),
+            Row(
+              spacing: 20,
+              children: <Widget>[
+                SizedBox(
+                  width: 15,
+                  child: Column(
+                    children: [Text('w', style: TextStyle(fontSize: 30))],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Row(
+                      spacing: 192,
+                      children: [
+                        HiraganaLetter(letter: 'わ', sound: 'wa'),
+                        HiraganaLetter(letter: 'を', sound: 'wo'),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Divider(indent: 30, endIndent: 40),
+            Row(
+              spacing: 20,
+              children: <Widget>[
+                SizedBox(
+                  width: 15,
+                  child: Column(
+                    children: [Text('', style: TextStyle(fontSize: 30))],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Row(children: [HiraganaLetter(letter: 'ん', sound: 'n/m')]),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
