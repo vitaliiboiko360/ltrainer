@@ -39,25 +39,52 @@ class HiraganaButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        Navigator.pushNamed(context, '/hiragana');
-      },
-      style: ButtonStyle(
-        fixedSize: WidgetStateProperty.resolveWith<Size?>((
-          Set<WidgetState> states,
-        ) {
-          return Size(sizeX, sizeY);
-        }),
-        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
-          Set<WidgetState> states,
-        ) {
-          return RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(radius)),
-          );
-        }),
-      ),
-      child: Text('Hiragana'),
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/hiragana');
+          },
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll<Color>(
+              const Color.fromARGB(115, 195, 223, 255),
+            ),
+            fixedSize: WidgetStateProperty.resolveWith<Size?>((
+              Set<WidgetState> states,
+            ) {
+              return Size(sizeX, sizeY);
+            }),
+            shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
+              Set<WidgetState> states,
+            ) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(radius)),
+              );
+            }),
+          ),
+          child: Stack(
+            children: [
+              Container(
+                decoration: ShapeDecoration(
+                  color: const Color.fromARGB(171, 187, 172, 255),
+                  shape: CircleBorder(),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'あ',
+                  style: TextStyle(fontSize: 140, color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsetsGeometry.all(10),
+          child: Text('Hiragana', style: TextStyle()),
+        ),
+      ],
     );
   }
 }
