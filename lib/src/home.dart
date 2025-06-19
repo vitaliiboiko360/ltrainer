@@ -39,7 +39,7 @@ class _MyHomePageState extends State<HomePage> {
             ),
             Line(),
             HiraganaButton(),
-            TileButton(onPressed: _goToKatakana, name: 'Katakana'),
+            KatakanaButton(),
             Line(),
             Text(
               'Most common Kanji word practice:',
