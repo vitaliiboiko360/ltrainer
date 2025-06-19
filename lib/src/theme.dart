@@ -12,4 +12,5 @@ ThemeData themeData = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: const Color.fromARGB(150, 5, 105, 214),
   ),
+  fontFamily: 'Nunito',
 );
