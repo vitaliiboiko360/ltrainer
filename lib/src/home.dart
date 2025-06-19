@@ -38,7 +38,7 @@ class _MyHomePageState extends State<HomePage> {
               style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
             ),
             Line(),
-            TileButton(onPressed: _goToHiragana, name: 'Hiragana'),
+            HiraganaButton(),
             TileButton(onPressed: _goToKatakana, name: 'Katakana'),
             Line(),
             Text(
