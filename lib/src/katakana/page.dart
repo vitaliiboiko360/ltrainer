@@ -24,7 +24,10 @@ class _KatakanaPageState extends State<KatakanaPage> {
                 transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
                 child: BackHome(),
               ),
-              Text('Katakana Table'),
+              Padding(
+                padding: EdgeInsetsGeometry.all(10),
+                child: Text('Katakana Chart', style: TextStyle(fontSize: 28)),
+              ),
               SizedBox(width: 400, height: 3200, child: KatakanaTable()),
             ],
           ),

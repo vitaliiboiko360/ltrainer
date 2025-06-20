@@ -143,3 +143,58 @@ class KatakanaButton extends StatelessWidget {
     );
   }
 }
+
+class KanjiButton extends StatelessWidget {
+  const KanjiButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/kanji');
+          },
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll<Color>(
+              const Color.fromARGB(115, 172, 218, 255),
+            ),
+            fixedSize: WidgetStateProperty.resolveWith<Size?>((
+              Set<WidgetState> states,
+            ) {
+              return Size(sizeX, sizeY);
+            }),
+            shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
+              Set<WidgetState> states,
+            ) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(radius)),
+              );
+            }),
+          ),
+          child: Stack(
+            children: [
+              Container(
+                decoration: ShapeDecoration(
+                  color: const Color.fromARGB(171, 255, 172, 227),
+                  shape: CircleBorder(),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  '漢字',
+                  style: TextStyle(fontSize: 90, color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsetsGeometry.all(10),
+          child: Text('Kanji', style: TextStyle(fontSize: 24)),
+        ),
+      ],
+    );
+  }
+}

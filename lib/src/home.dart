@@ -28,25 +28,30 @@ class _MyHomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Line(),
-            const Text(
-              'Basics:',
-              style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+      body: Scaffold(
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Line(),
+                const Text(
+                  'Basics:',
+                  style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                ),
+                Line(),
+                HiraganaButton(),
+                KatakanaButton(),
+                Line(),
+                Text(
+                  'Most Common Kanji Word Practice:',
+                  style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                ),
+                Line(),
+                KanjiButton(),
+              ],
             ),
-            Line(),
-            HiraganaButton(),
-            KatakanaButton(),
-            Line(),
-            Text(
-              'Most common Kanji word practice:',
-              style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
-            ),
-            Line(),
-          ],
+          ),
         ),
       ),
     );
