@@ -11,7 +11,7 @@ class KanjiPage extends StatefulWidget {
 class _KanjiPageState extends State<KanjiPage> {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: <Widget>[
         Text('Kanji List'),
         WordContainer(word: '日'),
