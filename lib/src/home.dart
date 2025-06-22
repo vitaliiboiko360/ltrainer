@@ -12,14 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<HomePage> {
-  void _goToKatakana() {
-    Navigator.pushNamed(context, '/katakana');
-  }
-
-  void _goToHiragana() {
-    Navigator.pushNamed(context, '/hiragana');
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
