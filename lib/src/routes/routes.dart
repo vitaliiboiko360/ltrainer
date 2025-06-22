@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/hiragana/page.dart';
+import 'package:ltrainer/src/kanji/page.dart';
 import 'package:ltrainer/src/katakana/page.dart';
 
 final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
@@ -8,5 +9,8 @@ final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   },
   '/katakana': (BuildContext context) {
     return KatakanaPage();
+  },
+  '/kanji': (BuildContext context) {
+    return KanjiPage();
   },
 };
