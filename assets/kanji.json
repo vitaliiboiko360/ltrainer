@@ -1,0 +1,702 @@
+[
+  {
+    "kanji": "日",
+    "sound": "hi, -bi, -ka",
+    "kunyomi": "ひ, -び, -か",
+    "translation": "day, sun, Japan, counter for days",
+    "level": "N5"
+  },
+  {
+    "kanji": "一",
+    "sound": "hito(tsu)",
+    "kunyomi": "ひと(つ)",
+    "translation": "one",
+    "level": "N5"
+  },
+  {
+    "kanji": "国",
+    "sound": "kuni",
+    "kunyomi": "くに",
+    "translation": "country",
+    "level": "N5"
+  },
+  {
+    "kanji": "会",
+    "sound": "a(u)",
+    "kunyomi": "あ(う)",
+    "translation": "meeting; meet",
+    "level": "N4"
+  },
+  {
+    "kanji": "人",
+    "sound": "hito",
+    "kunyomi": "ひと",
+    "translation": "person",
+    "level": "N5"
+  },
+  {
+    "kanji": "年",
+    "sound": "toshi",
+    "kunyomi": "とし",
+    "translation": "year, counter for years",
+    "level": "N5"
+  },
+  {
+    "kanji": "大",
+    "sound": "oo(kii)",
+    "kunyomi": "おお(きい)",
+    "translation": "large, big",
+    "level": "N5"
+  },
+  {
+    "kanji": "十",
+    "sound": "tou, to",
+    "kunyomi": "とお、 と",
+    "translation": "ten, 10",
+    "level": "N5"
+  },
+  {
+    "kanji": "二",
+    "sound": "futa(tsu)",
+    "kunyomi": "ふた(つ)",
+    "translation": "two, 2",
+    "level": "N5"
+  },
+  {
+    "kanji": "本",
+    "sound": "moto",
+    "kunyomi": "もと",
+    "translation": "book, present, true, counter for long cylindrical things",
+    "level": "N5"
+  },
+  {
+    "kanji": "中",
+    "sound": "naka, uchi, ata(ru)",
+    "kunyomi": "なか、 うち、 あた(る)",
+    "translation": "in, inside, middle, mean, center",
+    "level": "N5"
+  },
+  {
+    "kanji": "長",
+    "sound": "naga(i), osa",
+    "kunyomi": "なが(い)、 おさ",
+    "translation": "long, leader, superior, senior",
+    "level": "N5"
+  },
+  {
+    "kanji": "出",
+    "sound": "de(ru), da(su), i(deru)",
+    "kunyomi": "で(る)、 だ(す)、 い(でる)",
+    "translation": "exit, leave, go out",
+    "level": "N5"
+  },
+  {
+    "kanji": "三",
+    "sound": "mi(tsu)",
+    "kunyomi": "み(つ)",
+    "translation": "three, 3",
+    "level": "N5"
+  },
+  {
+    "kanji": "同",
+    "sound": "onaji",
+    "kunyomi": "おな(じ)",
+    "translation": "same, agree, equal",
+    "level": "N4"
+  },
+  {
+    "kanji": "時",
+    "sound": "toki, doki",
+    "kunyomi": "とき、 -どき",
+    "translation": "time, hour",
+    "level": "N5"
+  },
+  {
+    "kanji": "政",
+    "sound": "matsurigoto",
+    "kunyomi": "まつりごと",
+    "translation": "politics, government",
+    "level": "N3"
+  },
+  {
+    "kanji": "事",
+    "sound": "koto",
+    "kunyomi": "こと",
+    "translation": "matter, thing, fact, business, reason, possibly",
+    "level": "N4"
+  },
+  {
+    "kanji": "自",
+    "sound": "mizuka(ra)",
+    "kunyomi": "みずか(ら)",
+    "translation": "oneself",
+    "level": "N4"
+  },
+  {
+    "kanji": "行",
+    "sound": "i(ku), yu(ku), okona(u)",
+    "kunyomi": "い(く)、 ゆ(く)、 おこな(う)",
+    "translation": "going, journey, carry out, line, row",
+    "level": "N5"
+  },
+  {
+    "kanji": "社",
+    "sound": "yashiro",
+    "kunyomi": "やしろ",
+    "translation": "company, firm, office, association, shrine",
+    "level": "N4"
+  },
+  {
+    "kanji": "見",
+    "sound": "mi(ru), mi(seru)",
+    "kunyomi": "み(る)、 み(せる)",
+    "translation": "see, hopes, chances, idea, opinion, look at, visible",
+    "level": "N5"
+  },
+  {
+    "kanji": "月",
+    "sound": "tsuki",
+    "kunyomi": "つき",
+    "translation": "month, moon",
+    "level": "N5"
+  },
+  {
+    "kanji": "分",
+    "sound": "wa(keru)",
+    "kunyomi": "わ(ける)",
+    "translation": "part, minute of time, understand",
+    "level": "N5"
+  },
+  {
+    "kanji": "議",
+    "sound": "gi",
+    "kunyomi": "ギ",
+    "translation": "deliberation, consultation, debate",
+    "level": "N3"
+  },
+  {
+    "kanji": "後",
+    "sound": "nochi, ushi(ro), ato",
+    "kunyomi": "のち、 うし(ろ)、 あと",
+    "translation": "behind, back, later",
+    "level": "N5"
+  },
+  {
+    "kanji": "前",
+    "sound": "mae",
+    "kunyomi": "まえ",
+    "translation": "in front, before",
+    "level": "N5"
+  },
+  {
+    "kanji": "民",
+    "sound": "tami",
+    "kunyomi": "たみ",
+    "translation": "people, nation, subjects",
+    "level": "N3"
+  },
+  {
+    "kanji": "生",
+    "sound": "i(kiru), u(mu), o(u), ha(eru), nama",
+    "kunyomi": "い(きる)、 う(む)、 お(う)、 は(える)、 なま",
+    "translation": "life, genuine, birth",
+    "level": "N5"
+  },
+  {
+    "kanji": "連",
+    "sound": "tsura(naru), tsu(reru)",
+    "kunyomi": "つら(なる)、つ(れる)",
+    "translation": "take along, lead, join, connect",
+    "level": "N3"
+  },
+  {
+    "kanji": "五",
+    "sound": "itsu(tsu)",
+    "kunyomi": "いつ(つ)",
+    "translation": "five, 5",
+    "level": "N5"
+  },
+  {
+    "kanji": "発",
+    "sound": "hatsu, hotsu",
+    "kunyomi": "ハツ、 ホツ",
+    "translation": "departure, discharge, emit, start from",
+    "level": "N4"
+  },
+  {
+    "kanji": "間",
+    "sound": "aida, ma, ai",
+    "kunyomi": "あいだ、 ま、 あい",
+    "translation": "interval, space",
+    "level": "N5"
+  },
+  {
+    "kanji": "対",
+    "sound": "tai, tsui",
+    "kunyomi": "タイ、 ツイ",
+    "translation": "opposite, even, equal, versus, anti-, compare",
+    "level": "N3"
+  },
+  {
+    "kanji": "上",
+    "sound": "ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru)",
+    "kunyomi": "うえ、 うわ-、 かみ、 あ(げる)、 のぼ(る)、 たてまつ(る)",
+    "translation": "above, up",
+    "level": "N5"
+  },
+  {
+    "kanji": "部",
+    "sound": "bu",
+    "kunyomi": "ブ",
+    "translation": "section, bureau, dept, class, copy, part, portion",
+    "level": "N3"
+  },
+  {
+    "kanji": "東",
+    "sound": "higashi",
+    "kunyomi": "ひがし",
+    "translation": "east",
+    "level": "N5"
+  },
+  {
+    "kanji": "者",
+    "sound": "mono",
+    "kunyomi": "もの",
+    "translation": "someone, person",
+    "level": "N4"
+  },
+  {
+    "kanji": "党",
+    "sound": "nakama, mura",
+    "kunyomi": "なかま、 むら",
+    "translation": "party, faction, clique",
+    "level": "N2"
+  },
+  {
+    "kanji": "地",
+    "sound": "chi, ji",
+    "kunyomi": "チ、 ジ",
+    "translation": "ground, earth",
+    "level": "N4"
+  },
+  {
+    "kanji": "合",
+    "sound": "a(u), ai",
+    "kunyomi": "あ(う)、あい",
+    "translation": "fit, suit, join, 0.1",
+    "level": "N3"
+  },
+  {
+    "kanji": "市",
+    "sound": "ichi",
+    "kunyomi": "いち",
+    "translation": "market, city, town",
+    "level": "N3"
+  },
+  {
+    "kanji": "業",
+    "sound": "waza",
+    "kunyomi": "わざ",
+    "translation": "business, vocation, arts, performance",
+    "level": "N4"
+  },
+  {
+    "kanji": "内",
+    "sound": "uchi",
+    "kunyomi": "うち",
+    "translation": "inside, within, between, among, house, home",
+    "level": "N3"
+  },
+  {
+    "kanji": "相",
+    "sound": "ai",
+    "kunyomi": "あい",
+    "translation": "inter-, mutual, together, each other, minister of state",
+    "level": "N3"
+  },
+  {
+    "kanji": "方",
+    "sound": "kata",
+    "kunyomi": "かた",
+    "translation": "direction, person, alternative",
+    "level": "N4"
+  },
+  {
+    "kanji": "四",
+    "sound": "yo(tsu), yon",
+    "kunyomi": "よ(つ)、 よん",
+    "translation": "four, 4",
+    "level": "N5"
+  },
+  {
+    "kanji": "定",
+    "sound": "sada(meru)",
+    "kunyomi": "さだ(める)",
+    "translation": "determine, fix, establish, decide",
+    "level": "N3"
+  },
+  {
+    "kanji": "今",
+    "sound": "ima",
+    "kunyomi": "いま",
+    "translation": "now; the present",
+    "level": "N5"
+  },
+  {
+    "kanji": "回",
+    "sound": "mawa(su)",
+    "kunyomi": "まわ(す)",
+    "translation": "-times, round, revolve, counter",
+    "level": "N3"
+  },
+  {
+    "kanji": "新",
+    "sound": "atara(shii), ara(ta)",
+    "kunyomi": "あたら(しい)、 あら(た)",
+    "translation": "new",
+    "level": "N4"
+  },
+  {
+    "kanji": "場",
+    "sound": "ba",
+    "kunyomi": "ば",
+    "translation": "location, place",
+    "level": "N4"
+  },
+  {
+    "kanji": "金",
+    "sound": "kane, kana, gane",
+    "kunyomi": "かね、 かな-、 -がね",
+    "translation": "gold",
+    "level": "N5"
+  },
+  {
+    "kanji": "員",
+    "sound": "in",
+    "kunyomi": "イン",
+    "translation": "employee, member, number, the one in charge",
+    "level": "N4"
+  },
+  {
+    "kanji": "九",
+    "sound": "kokono(tsu)",
+    "kunyomi": "ここの(つ)",
+    "translation": "nine, 9",
+    "level": "N5"
+  },
+  {
+    "kanji": "入",
+    "sound": "i(ru), hai(ru)",
+    "kunyomi": "い(る)、はい(る)",
+    "translation": "enter, insert",
+    "level": "N5"
+  },
+  {
+    "kanji": "選",
+    "sound": "era(bu)",
+    "kunyomi": "えら(ぶ)",
+    "translation": "elect, select, choose, prefer",
+    "level": "N3"
+  },
+  {
+    "kanji": "立",
+    "sound": "ta(tsu)",
+    "kunyomi": "た(つ)",
+    "translation": "stand up, rise",
+    "level": "N4"
+  },
+  {
+    "kanji": "開",
+    "sound": "hira(ku), a(keru)",
+    "kunyomi": "ひら(く)、 あ(ける)",
+    "translation": "open, unfold, unseal",
+    "level": "N4"
+  },
+  {
+    "kanji": "手",
+    "sound": "te",
+    "kunyomi": "て",
+    "translation": "hand",
+    "level": "N4"
+  },
+  {
+    "kanji": "米",
+    "sound": "kome",
+    "kunyomi": "こめ",
+    "translation": "rice, USA, meter",
+    "level": "N3"
+  },
+  {
+    "kanji": "力",
+    "sound": "chikara",
+    "kunyomi": "ちから",
+    "translation": "power, strength, strong, strain, bear up, exert",
+    "level": "N4"
+  },
+  {
+    "kanji": "学",
+    "sound": "mana(bu)",
+    "kunyomi": "まな(ぶ)",
+    "translation": "study, learning, science",
+    "level": "N5"
+  },
+  {
+    "kanji": "問",
+    "sound": "to(u)",
+    "kunyomi": "と(う)",
+    "translation": "question, ask, problem",
+    "level": "N4"
+  },
+  {
+    "kanji": "高",
+    "sound": "taka(i)",
+    "kunyomi": "たか(い)",
+    "translation": "tall, high, expensive",
+    "level": "N5"
+  },
+  {
+    "kanji": "代",
+    "sound": "ka(wari)",
+    "kunyomi": "か(わり)",
+    "translation": "substitute, change, convert, replace, period",
+    "level": "N4"
+  },
+  {
+    "kanji": "明",
+    "sound": "aka(rui)",
+    "kunyomi": "あか(るい)",
+    "translation": "bright, light",
+    "level": "N4"
+  },
+  {
+    "kanji": "実",
+    "sound": "mi, mino(ru)",
+    "kunyomi": "み、みの(る)",
+    "translation": "reality, truth",
+    "level": "N3"
+  },
+  {
+    "kanji": "円",
+    "sound": "maru(i)",
+    "kunyomi": "まる(い)",
+    "translation": "circle, yen, round",
+    "level": "N5"
+  },
+  {
+    "kanji": "関",
+    "sound": "seki, kaka(waru)",
+    "kunyomi": "せき、 かか(わる)",
+    "translation": "connection, barrier, gateway, involve, concerning",
+    "level": "N3"
+  },
+  {
+    "kanji": "決",
+    "sound": "ki(meru)",
+    "kunyomi": "き(める)",
+    "translation": "decide, fix, agree upon, appoint",
+    "level": "N3"
+  },
+  {
+    "kanji": "子",
+    "sound": "ko, ne",
+    "kunyomi": "こ、 ね",
+    "translation": "child",
+    "level": "N5"
+  },
+  {
+    "kanji": "動",
+    "sound": "ugo(ku)",
+    "kunyomi": "うご(く)",
+    "translation": "move, motion, change",
+    "level": "N4"
+  },
+  {
+    "kanji": "京",
+    "sound": "miyako",
+    "kunyomi": "みやこ",
+    "translation": "capital",
+    "level": "N4"
+  },
+  {
+    "kanji": "全",
+    "sound": "matta(ku), sube(te)",
+    "kunyomi": "まった(く)、 すべ(て)",
+    "translation": "whole, entire, all, complete, fulfill",
+    "level": "N3"
+  },
+  {
+    "kanji": "目",
+    "sound": "me",
+    "kunyomi": "め",
+    "translation": "eye, class, look, insight, experience",
+    "level": "N4"
+  },
+  {
+    "kanji": "表",
+    "sound": "omote, arawa(su)",
+    "kunyomi": "おもて、 あらわ(す)",
+    "translation": "surface, table, chart, diagram",
+    "level": "N3"
+  },
+  {
+    "kanji": "戦",
+    "sound": "ikusa, tataka(u)",
+    "kunyomi": "いくさ、 たたか(う)",
+    "translation": "war, battle, match",
+    "level": "N3"
+  },
+  {
+    "kanji": "経",
+    "sound": "he(ru), ta(tsu)",
+    "kunyomi": "へ(る)、 た(つ)",
+    "translation": "longitude, pass thru, expire, warp",
+    "level": "N3"
+  },
+  {
+    "kanji": "通",
+    "sound": "too(ru), kayo(u)",
+    "kunyomi": "とお(る)、かよ(う)",
+    "translation": "traffic, pass through, avenue, commute",
+    "level": "N4"
+  },
+  {
+    "kanji": "外",
+    "sound": "soto, hoka, hazu-, to-",
+    "kunyomi": "そと、 ほか、 はず(す)、 と-",
+    "translation": "outside",
+    "level": "N5"
+  },
+  {
+    "kanji": "最",
+    "sound": "motto(mo)",
+    "kunyomi": "もっと(も)",
+    "translation": "utmost, most, extreme",
+    "level": "N3"
+  },
+  {
+    "kanji": "言",
+    "sound": "i(u), koto",
+    "kunyomi": "い（う）、 こと",
+    "translation": "say, word",
+    "level": "N4"
+  },
+  {
+    "kanji": "氏",
+    "sound": "uji",
+    "kunyomi": "うじ",
+    "translation": "family name, surname, clan",
+    "level": "N1"
+  },
+  {
+    "kanji": "現",
+    "sound": "arawa(reru), utsu(tsu)",
+    "kunyomi": "あらわ(れる)、 うつ(つ)",
+    "translation": "present, existing, actual",
+    "level": "N3"
+  },
+  {
+    "kanji": "理",
+    "sound": "ri",
+    "kunyomi": "リ",
+    "translation": "logic, arrangement, reason, justice, truth",
+    "level": "N4"
+  },
+  {
+    "kanji": "調",
+    "sound": "shira(beru), tono(u)",
+    "kunyomi": "しら(べる)、ととの(う)",
+    "translation": "tune, tone, meter, prepare, investigate",
+    "level": "N3"
+  },
+  {
+    "kanji": "体",
+    "sound": "karada",
+    "kunyomi": "からだ",
+    "translation": "body, substance, object, reality",
+    "level": "N4"
+  },
+  {
+    "kanji": "化",
+    "sound": "ba(keru), fu(keru)",
+    "kunyomi": "ば(ける)、 ふ(ける)",
+    "translation": "change, take the form of, influence, enchant, delude, -ization",
+    "level": "N3"
+  },
+  {
+    "kanji": "田",
+    "sound": "ta",
+    "kunyomi": "た",
+    "translation": "rice field, rice paddy",
+    "level": "N4"
+  },
+  {
+    "kanji": "当",
+    "sound": "a(taru)",
+    "kunyomi": "あ(たる)",
+    "translation": "hit, right, appropriate",
+    "level": "N3"
+  },
+  {
+    "kanji": "八",
+    "sound": "ya(tsu), you",
+    "kunyomi": "や(つ)、 よう",
+    "translation": "eight, 8",
+    "level": "N5"
+  },
+  {
+    "kanji": "六",
+    "sound": "mu(tsu), mui",
+    "kunyomi": "む(つ)、 むい",
+    "translation": "six, 6",
+    "level": "N5"
+  },
+  {
+    "kanji": "約",
+    "sound": "tsuzu(maru)",
+    "kunyomi": "つづ(まる)",
+    "translation": "promise, approximately, shrink",
+    "level": "N3"
+  },
+  {
+    "kanji": "主",
+    "sound": "nushi, omo",
+    "kunyomi": "ぬし、 おも",
+    "translation": "lord, chief, master, main thing, principal",
+    "level": "N4"
+  },
+  {
+    "kanji": "題",
+    "sound": "dai",
+    "kunyomi": "ダイ",
+    "translation": "topic, subject",
+    "level": "N4"
+  },
+  {
+    "kanji": "下",
+    "sound": "shita, shimo, moto, sa(geru), kuda(ru), o(rosu)",
+    "kunyomi": "した、 しも、 もと、 さ(げる)、 くだ(る)、 お(ろす)",
+    "translation": "below, down, descend, give, low, inferior",
+    "level": "N5"
+  },
+  {
+    "kanji": "首",
+    "sound": "kubi",
+    "kunyomi": "くび",
+    "translation": "neck",
+    "level": "N3"
+  },
+  {
+    "kanji": "意",
+    "sound": "i",
+    "kunyomi": "イ",
+    "translation": "idea, mind, heart, taste, thought",
+    "level": "N4"
+  },
+  {
+    "kanji": "法",
+    "sound": "nori",
+    "kunyomi": "のり",
+    "translation": "method, law, rule, principle, model, system",
+    "level": "N3"
+  }
+]
