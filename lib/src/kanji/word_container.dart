@@ -12,21 +12,24 @@ class WordContainer extends StatefulWidget {
 class _WordContainerState extends State<WordContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.white),
-        borderRadius: BorderRadius.circular(6),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withValues(alpha: 0.5),
-            offset: Offset(2, 2),
-            blurRadius: 4,
-          ),
-        ],
+    return FittedBox(
+      child: Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: Colors.white),
+          borderRadius: BorderRadius.circular(6),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withValues(alpha: 0.5),
+              offset: Offset(2, 2),
+              blurRadius: 4,
+            ),
+          ],
+        ),
+
+        child: Text(widget.word),
       ),
-      child: Text(widget.word),
     );
   }
 }
