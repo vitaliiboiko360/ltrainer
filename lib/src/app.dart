@@ -10,6 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Nihongo App',
+      debugShowCheckedModeBanner: false,
       theme: themeData,
       home: const HomePage(),
       routes: routes,
