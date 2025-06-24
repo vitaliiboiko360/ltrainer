@@ -15,6 +15,7 @@ class _WordContainerState extends State<WordContainer> {
     return Padding(
       padding: EdgeInsets.all(6),
       child: FittedBox(
+        fit: BoxFit.fitHeight,
         child: Container(
           alignment: Alignment.center,
           decoration: BoxDecoration(
