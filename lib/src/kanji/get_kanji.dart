@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
+import 'package:collection/collection.dart';
 
 const int httpOk = 200;
-int order = 1;
 
 Future<List<KanjiInfo>> getKanji(http.Client client) async {
   final response = await client.get(
@@ -22,7 +22,11 @@ List<KanjiInfo> parseKanji(String responseBody) {
   final parsed =
       (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
 
-  return parsed.map<KanjiInfo>((json) => KanjiInfo.fromJsonObj(json)).toList();
+  return parsed
+      .mapIndexed<KanjiInfo>(
+        (index, json) => KanjiInfo.fromJsonObj(index, json),
+      )
+      .toList();
 }
 
 class KanjiInfo {
@@ -42,9 +46,9 @@ class KanjiInfo {
     required this.level,
   });
 
-  factory KanjiInfo.fromJsonObj(Map<String, dynamic> jsonObj) {
+  factory KanjiInfo.fromJsonObj(int orderId, Map<String, dynamic> jsonObj) {
     return KanjiInfo(
-      orderId: ++order,
+      orderId: orderId,
       kanji: jsonObj['kanji'] as String,
       sound: jsonObj['sound'] as String,
       kunyomi: jsonObj['kunyomi'] as String,
