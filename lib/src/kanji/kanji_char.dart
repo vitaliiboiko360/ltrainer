@@ -6,10 +6,10 @@ class KanjiChar extends StatefulWidget {
   final String word;
 
   @override
-  State<KanjiChar> createState() => _WordContainerState();
+  State<KanjiChar> createState() => _KanjiCharState();
 }
 
-class _WordContainerState extends State<KanjiChar> {
+class _KanjiCharState extends State<KanjiChar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
