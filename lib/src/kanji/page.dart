@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/back_home.dart';
-import 'package:ltrainer/src/kanji/word_container.dart';
+import 'package:ltrainer/src/kanji/main_screen.dart';
 
 class KanjiPage extends StatefulWidget {
   const KanjiPage({super.key});
@@ -26,11 +26,7 @@ class _KanjiPageState extends State<KanjiPage> {
                   child: BackHome(),
                 ),
                 Text('Kanji Drill', style: TextStyle(fontSize: 30)),
-                KanjiChar(word: '日'),
-                KanjiChar(word: '一'),
-                KanjiChar(word: '国'),
-                KanjiChar(word: '会'),
-                KanjiChar(word: '人'),
+                MainScreen(),
               ],
             ),
           ),
