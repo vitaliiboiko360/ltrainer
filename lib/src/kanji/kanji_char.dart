@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class WordContainer extends StatefulWidget {
-  const WordContainer({super.key, required this.word});
+class KanjiChar extends StatefulWidget {
+  const KanjiChar({super.key, required this.word});
 
   final String word;
 
   @override
-  State<WordContainer> createState() => _WordContainerState();
+  State<KanjiChar> createState() => _WordContainerState();
 }
 
-class _WordContainerState extends State<WordContainer> {
+class _WordContainerState extends State<KanjiChar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,7 +30,6 @@ class _WordContainerState extends State<WordContainer> {
               ),
             ],
           ),
-
           child: Padding(
             padding: EdgeInsets.all(6),
             child: Text(widget.word, style: TextStyle(fontSize: 40)),
