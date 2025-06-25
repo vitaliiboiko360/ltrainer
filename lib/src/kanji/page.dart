@@ -15,20 +15,24 @@ class _KanjiPageState extends State<KanjiPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
-                child: BackHome(),
-              ),
-              Text('Kanji Drill', style: TextStyle(fontSize: 30)),
-              WordContainer(word: '日'),
-              WordContainer(word: '一'),
-              WordContainer(word: '国'),
-              WordContainer(word: '会'),
-              WordContainer(word: '人'),
-            ],
+          child: SizedBox(
+            width: 600,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Transform(
+                  transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
+                  child: BackHome(),
+                ),
+                Text('Kanji Drill', style: TextStyle(fontSize: 30)),
+                KanjiChar(word: '日'),
+                KanjiChar(word: '一'),
+                KanjiChar(word: '国'),
+                KanjiChar(word: '会'),
+                KanjiChar(word: '人'),
+              ],
+            ),
           ),
         ),
       ),
