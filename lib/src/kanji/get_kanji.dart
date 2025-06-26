@@ -5,13 +5,17 @@ import 'package:flutter/foundation.dart';
 import 'package:collection/collection.dart';
 
 const int httpOk = 200;
+const int httpNotChanged = 304;
+
+bool isReponseOk(http.Response response) {
+  return response.statusCode == httpOk || response.statusCode == httpNotChanged;
+}
 
 Future<List<KanjiInfo>> getKanji(http.Client client) async {
-  final response = await client.get(
-    Uri.parse('http://127.0.0.1:8080/kanji.json'),
+  final response = await http.get(
+    Uri.parse('http://192.168.0.106:8080/kanji.json'),
   );
-
-  if (response.statusCode == httpOk) {
+  if (isReponseOk(response)) {
     return compute(parseKanji, response.body);
   } else {
     throw Exception('Failed to load KanjiInfo');
