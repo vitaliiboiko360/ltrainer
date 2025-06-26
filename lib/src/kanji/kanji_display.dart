@@ -27,6 +27,9 @@ class _KanjiDisplayState extends State<KanjiDisplay> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: _buildBlock());
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: _buildBlock(),
+    );
   }
 }
