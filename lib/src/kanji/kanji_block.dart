@@ -123,6 +123,9 @@ class _KanjiBlockState extends State<KanjiBlock> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: _buildChars(widget.kanjiList));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: _buildChars(widget.kanjiList),
+    );
   }
 }
