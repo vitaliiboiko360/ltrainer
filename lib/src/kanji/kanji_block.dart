@@ -3,9 +3,10 @@ import 'package:ltrainer/src/kanji/get_kanji.dart';
 import 'package:ltrainer/src/kanji/kanji_char.dart';
 
 class KanjiBlock extends StatefulWidget {
-  const KanjiBlock({super.key, required this.kanjiList});
+  const KanjiBlock({super.key, required this.kanjiList, this.isOdd = false});
 
   final List<KanjiInfo> kanjiList;
+  final bool isOdd;
 
   @override
   State<KanjiBlock> createState() => _KanjiBlockState();
@@ -125,7 +126,11 @@ class _KanjiBlockState extends State<KanjiBlock> {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: _buildChars(widget.kanjiList),
+      children:
+          [
+            [widget.isOdd ? SizedBox(width: 120) : SizedBox.shrink()],
+            _buildChars(widget.kanjiList),
+          ].expand((x) => x).toList(),
     );
   }
 }
