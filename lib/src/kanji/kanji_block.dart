@@ -124,18 +124,30 @@ class _KanjiBlockState extends State<KanjiBlock> {
     return [
       Column(
         children: [
-          KanjiChar(word: widget.kanjiList[0].kanji),
+          KanjiChar(
+            word: widget.kanjiList[0].kanji,
+            kanjiInfo: widget.kanjiList[0],
+          ),
           isInSize(widget.kanjiList, 1)
-              ? KanjiChar(word: widget.kanjiList[1].kanji)
+              ? KanjiChar(
+                word: widget.kanjiList[1].kanji,
+                kanjiInfo: widget.kanjiList[1],
+              )
               : SizedBox.shrink(),
         ],
       ),
       isInSize(widget.kanjiList, 2)
           ? Column(
             children: [
-              KanjiChar(word: widget.kanjiList[2].kanji),
+              KanjiChar(
+                word: widget.kanjiList[2].kanji,
+                kanjiInfo: widget.kanjiList[2],
+              ),
               isInSize(widget.kanjiList, 3)
-                  ? KanjiChar(word: widget.kanjiList[3].kanji)
+                  ? KanjiChar(
+                    word: widget.kanjiList[3].kanji,
+                    kanjiInfo: widget.kanjiList[3],
+                  )
                   : SizedBox.shrink(),
             ],
           )
