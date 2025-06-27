@@ -34,7 +34,7 @@ class _KanjiPageState extends State<KanjiPage> {
                       child: BackHome(),
                     ),
                     Text('Kanji Drill', style: TextStyle(fontSize: 30)),
-                    Text('(Kunyomi)', style: TextStyle(fontSize: 20)),
+                    Text('(Kun\'Yomi Reading)', style: TextStyle(fontSize: 20)),
                     const SizedBox(height: 15),
                     MainScreen(),
                   ],
