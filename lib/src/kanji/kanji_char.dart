@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/kanji/get_kanji.dart';
+import 'package:ltrainer/src/kanji/kanji_wordcontainer.dart';
 
 class KanjiChar extends StatefulWidget {
-  const KanjiChar({super.key, required this.word});
+  KanjiChar({
+    super.key,
+    required this.word,
+    this.kanjiInfo = const KanjiInfo(
+      orderId: -1,
+      kanji: '',
+      sound: '',
+      kunyomi: '',
+      translation: '',
+      level: '',
+    ),
+  });
 
   final String word;
+  KanjiInfo kanjiInfo;
 
   @override
   State<KanjiChar> createState() => _KanjiCharState();
@@ -39,13 +53,13 @@ class _KanjiCharState extends State<KanjiChar> {
                     builder:
                         (BuildContext context) => Dialog(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                const SizedBox(height: 15),
-                                Text(widget.word),
+                                const SizedBox(height: 25),
+                                KanjiWordContainer(kanjiInfo: widget.kanjiInfo),
                                 const SizedBox(height: 15),
                                 TextButton(
                                   onPressed: () {
