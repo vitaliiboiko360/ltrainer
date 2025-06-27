@@ -10,6 +10,6 @@ class KanjiWordContainer extends StatefulWidget {
 class _KanjiWordContainerState extends State<KanjiWordContainer> {
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[]);
+    return SizedBox.shrink();
   }
 }
