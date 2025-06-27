@@ -44,6 +44,7 @@ dependencies:
   value_notifier_tools: ^0.1.2
   http: ^1.4.0
   collection: ^1.19.1
+  fetch_client: ^1.1.4
 
 dev_dependencies:
   flutter_test:
