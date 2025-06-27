@@ -18,21 +18,42 @@ class _KanjiBlockState extends State<KanjiBlock> {
       return [
         Column(
           children: [
-            KanjiChar(word: widget.kanjiList[0].kanji),
-            KanjiChar(word: widget.kanjiList[1].kanji),
+            KanjiChar(
+              word: widget.kanjiList[0].kanji,
+              kanjiInfo: widget.kanjiList[0],
+            ),
+            KanjiChar(
+              word: widget.kanjiList[1].kanji,
+              kanjiInfo: widget.kanjiList[1],
+            ),
           ],
         ),
         Column(
           children: [
-            KanjiChar(word: widget.kanjiList[2].kanji),
-            KanjiChar(word: widget.kanjiList[3].kanji),
-            KanjiChar(word: widget.kanjiList[4].kanji),
+            KanjiChar(
+              word: widget.kanjiList[2].kanji,
+              kanjiInfo: widget.kanjiList[2],
+            ),
+            KanjiChar(
+              word: widget.kanjiList[3].kanji,
+              kanjiInfo: widget.kanjiList[3],
+            ),
+            KanjiChar(
+              word: widget.kanjiList[4].kanji,
+              kanjiInfo: widget.kanjiList[4],
+            ),
           ],
         ),
         Column(
           children: [
-            KanjiChar(word: widget.kanjiList[5].kanji),
-            KanjiChar(word: widget.kanjiList[6].kanji),
+            KanjiChar(
+              word: widget.kanjiList[5].kanji,
+              kanjiInfo: widget.kanjiList[5],
+            ),
+            KanjiChar(
+              word: widget.kanjiList[6].kanji,
+              kanjiInfo: widget.kanjiList[6],
+            ),
           ],
         ),
       ];
