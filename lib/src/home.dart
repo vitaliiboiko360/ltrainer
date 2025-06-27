@@ -5,7 +5,7 @@ import 'package:ltrainer/src/home/tile_buttons.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
-  final String title = 'Nihongo App';
+  final String title = 'Nihongo Learner';
 
   @override
   State<HomePage> createState() => _MyHomePageState();
