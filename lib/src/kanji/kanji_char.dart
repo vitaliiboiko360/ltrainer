@@ -32,7 +32,40 @@ class _KanjiCharState extends State<KanjiChar> {
           ),
           child: Padding(
             padding: EdgeInsets.all(6),
-            child: Text(widget.word, style: TextStyle(fontSize: 40)),
+            child: TextButton(
+              onPressed:
+                  () => showDialog<String>(
+                    context: context,
+                    builder:
+                        (BuildContext context) => Dialog(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                Text(widget.word),
+                                const SizedBox(height: 15),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Icon(Icons.check),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                  ),
+              style: ButtonStyle(
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              ),
+              child: Text(
+                widget.word,
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
+            ),
           ),
         ),
       ),
