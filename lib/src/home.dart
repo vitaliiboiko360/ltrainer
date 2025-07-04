@@ -18,7 +18,20 @@ class _MyHomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image(
+              height: 32,
+              width: 32,
+              image: AssetImage('flag-japan_1f1ef-1f1f5.png'),
+            ),
+            Text(' '),
+            Text(widget.title),
+          ],
+        ),
       ),
       body: Scaffold(
         body: SingleChildScrollView(
@@ -27,17 +40,43 @@ class _MyHomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Line(),
-                const Text(
-                  'Basics:',
-                  style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image(
+                      height: 32,
+                      width: 32,
+                      image: AssetImage(
+                        'japanese-passing-grade-button_1f234.png',
+                      ),
+                    ),
+                    Text(' '),
+                    const Text(
+                      'Basics: ',
+                      style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                    ),
+                  ],
                 ),
                 Line(),
                 HiraganaButton(),
                 KatakanaButton(),
                 Line(),
-                Text(
-                  'Most Common Kanji Word Practice:',
-                  style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image(
+                      height: 32,
+                      width: 32,
+                      image: AssetImage('books_1f4da.png'),
+                    ),
+                    Text(' '),
+                    Text(
+                      'Most Common Kanji Word Practice:',
+                      style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                    ),
+                  ],
                 ),
                 Line(),
                 KanjiButton(),
