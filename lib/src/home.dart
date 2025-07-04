@@ -47,6 +47,8 @@ class _MyHomePageState extends State<HomePage> {
                     Image(
                       height: 32,
                       width: 32,
+                      filterQuality: FilterQuality.high,
+                      isAntiAlias: true,
                       image: AssetImage(
                         'japanese-passing-grade-button_1f234.png',
                       ),
@@ -69,6 +71,8 @@ class _MyHomePageState extends State<HomePage> {
                     Image(
                       height: 32,
                       width: 32,
+                      filterQuality: FilterQuality.high,
+                      isAntiAlias: true,
                       image: AssetImage('books_1f4da.png'),
                     ),
                     Text(' '),
