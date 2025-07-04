@@ -82,7 +82,23 @@ class HiraganaButton extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsetsGeometry.all(10),
-          child: Text('Hiragana', style: TextStyle(fontSize: 24)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image(
+                height: 32,
+                width: 32,
+                filterQuality: FilterQuality.high,
+                isAntiAlias: true,
+                image: AssetImage(
+                  'writing-hand_light-skin-tone_270d-1f3fb_1f3fb.png',
+                ),
+              ),
+              Text(' '),
+              Text('Hiragana', style: TextStyle(fontSize: 24)),
+            ],
+          ),
         ),
       ],
     );
@@ -137,7 +153,21 @@ class KatakanaButton extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsetsGeometry.all(10),
-          child: Text('Katakana', style: TextStyle(fontSize: 24)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image(
+                height: 32,
+                width: 32,
+                filterQuality: FilterQuality.high,
+                isAntiAlias: true,
+                image: AssetImage('input-latin-letters_1f524.png'),
+              ),
+              Text(' '),
+              Text('Katakana', style: TextStyle(fontSize: 24)),
+            ],
+          ),
         ),
       ],
     );
@@ -192,7 +222,21 @@ class KanjiButton extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsetsGeometry.all(10),
-          child: Text('Kanji', style: TextStyle(fontSize: 24)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image(
+                height: 32,
+                width: 32,
+                filterQuality: FilterQuality.high,
+                isAntiAlias: true,
+                image: AssetImage('open-book_1f4d6.png'),
+              ),
+              Text(' '),
+              Text('Kanji', style: TextStyle(fontSize: 24)),
+            ],
+          ),
         ),
       ],
     );
