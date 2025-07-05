@@ -353,3 +353,73 @@ class StoriesButton extends StatelessWidget {
     );
   }
 }
+
+class StoriesButtonLevel1 extends StatelessWidget {
+  const StoriesButtonLevel1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/stories-level-1');
+          },
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll<Color>(
+              const Color.fromARGB(115, 187, 151, 255),
+            ),
+            fixedSize: WidgetStateProperty.resolveWith<Size?>((
+              Set<WidgetState> states,
+            ) {
+              return Size(sizeX, sizeY);
+            }),
+            shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
+              Set<WidgetState> states,
+            ) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(radius)),
+              );
+            }),
+          ),
+          child: Stack(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                child: ClipRRect(
+                  clipper: RoundedRevealClipper(),
+                  child: Image(
+                    alignment: Alignment.center,
+                    height: sizeX,
+                    width: sizeY,
+                    filterQuality: FilterQuality.high,
+                    isAntiAlias: true,
+                    image: AssetImage('81Jb6LBy9ZL.jpg'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsetsGeometry.all(10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Level', style: TextStyle(fontSize: 24)),
+              Text(' '),
+              Image(
+                height: 32,
+                width: 32,
+                filterQuality: FilterQuality.high,
+                isAntiAlias: true,
+                image: AssetImage('keycap-digit-one_31-fe0f-20e3.png'),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
