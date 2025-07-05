@@ -293,7 +293,7 @@ class StoriesButton extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/stories-level-0');
+            Navigator.pushNamed(context, '/stories-0');
           },
           style: ButtonStyle(
             backgroundColor: WidgetStatePropertyAll<Color>(
@@ -363,7 +363,7 @@ class StoriesButtonLevel1 extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/stories-level-1');
+            Navigator.pushNamed(context, '/stories-1');
           },
           style: ButtonStyle(
             backgroundColor: WidgetStatePropertyAll<Color>(
