@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 const double sizeX = 240;
@@ -235,6 +237,91 @@ class KanjiButton extends StatelessWidget {
               ),
               Text(' '),
               Text('Kanji', style: TextStyle(fontSize: 24)),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class CircleRevealClipper extends CustomClipper<Rect> {
+  CircleRevealClipper();
+
+  @override
+  Rect getClip(Size size) {
+    return Rect.fromCircle(
+      center: Offset(size.width / 2, size.height / 2),
+      radius: size.width / 2,
+    );
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Rect> oldClipper) {
+    return true;
+  }
+}
+
+class StoriesButton extends StatelessWidget {
+  const StoriesButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/stories');
+          },
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll<Color>(
+              const Color.fromARGB(115, 151, 208, 255),
+            ),
+            fixedSize: WidgetStateProperty.resolveWith<Size?>((
+              Set<WidgetState> states,
+            ) {
+              return Size(sizeX, sizeY);
+            }),
+            shape: WidgetStateProperty.resolveWith<OutlinedBorder?>((
+              Set<WidgetState> states,
+            ) {
+              return RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(radius)),
+              );
+            }),
+          ),
+          child: Center(
+            child: Container(
+              alignment: Alignment.center,
+              child: ClipOval(
+                clipper: CircleRevealClipper(),
+                child: Image(
+                  alignment: Alignment.center,
+                  height: sizeX,
+                  width: sizeY,
+                  filterQuality: FilterQuality.high,
+                  isAntiAlias: true,
+                  image: AssetImage('81Jb6LBy9ZL.jpg'),
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsetsGeometry.all(10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Level', style: TextStyle(fontSize: 24)),
+              Text(' '),
+              Image(
+                height: 32,
+                width: 32,
+                filterQuality: FilterQuality.high,
+                isAntiAlias: true,
+                image: AssetImage('keycap-digit-zero_30-fe0f-20e3.png'),
+              ),
             ],
           ),
         ),
