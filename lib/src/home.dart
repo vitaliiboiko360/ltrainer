@@ -84,6 +84,28 @@ class _MyHomePageState extends State<HomePage> {
                 ),
                 Line(),
                 KanjiButton(),
+                Line(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image(
+                      height: 32,
+                      width: 32,
+                      filterQuality: FilterQuality.high,
+                      isAntiAlias: true,
+                      image: AssetImage('speech-balloon_1f4ac.png'),
+                    ),
+                    Text(' '),
+                    Text(
+                      'Listen Speak Stories:',
+                      style: TextStyle(fontFamily: 'Nunito', fontSize: 22),
+                    ),
+                  ],
+                ),
+                Line(),
+                StoriesButton(),
+                SizedBox(height: 150),
               ],
             ),
           ),
