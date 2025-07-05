@@ -293,7 +293,7 @@ class StoriesButton extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/stories');
+            Navigator.pushNamed(context, '/stories-level-0');
           },
           style: ButtonStyle(
             backgroundColor: WidgetStatePropertyAll<Color>(
@@ -394,7 +394,7 @@ class StoriesButtonLevel1 extends StatelessWidget {
                     width: sizeY,
                     filterQuality: FilterQuality.high,
                     isAntiAlias: true,
-                    image: AssetImage('81Jb6LBy9ZL.jpg'),
+                    image: AssetImage('81Jb6LBy9ZL_2.jpg'),
                   ),
                 ),
               ),
