@@ -262,6 +262,28 @@ class CircleRevealClipper extends CustomClipper<Rect> {
   }
 }
 
+class RoundedRevealClipper extends CustomClipper<RRect> {
+  RoundedRevealClipper();
+
+  final double radius = 24;
+
+  @override
+  RRect getClip(Size size) {
+    return RRect.fromRectAndCorners(
+      Rect.fromLTWH(1, 13, 214, 214),
+      topLeft: Radius.circular(radius),
+      topRight: Radius.circular(radius),
+      bottomLeft: Radius.circular(radius),
+      bottomRight: Radius.circular(radius),
+    );
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<RRect> oldClipper) {
+    return true;
+  }
+}
+
 class StoriesButton extends StatelessWidget {
   const StoriesButton({super.key});
 
@@ -290,21 +312,23 @@ class StoriesButton extends StatelessWidget {
               );
             }),
           ),
-          child: Center(
-            child: Container(
-              alignment: Alignment.center,
-              child: ClipOval(
-                clipper: CircleRevealClipper(),
-                child: Image(
-                  alignment: Alignment.center,
-                  height: sizeX,
-                  width: sizeY,
-                  filterQuality: FilterQuality.high,
-                  isAntiAlias: true,
-                  image: AssetImage('81Jb6LBy9ZL.jpg'),
+          child: Stack(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                child: ClipRRect(
+                  clipper: RoundedRevealClipper(),
+                  child: Image(
+                    alignment: Alignment.center,
+                    height: sizeX,
+                    width: sizeY,
+                    filterQuality: FilterQuality.high,
+                    isAntiAlias: true,
+                    image: AssetImage('icon_miscelenious.png'),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
         Padding(
