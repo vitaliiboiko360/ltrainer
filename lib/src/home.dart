@@ -105,6 +105,7 @@ class _MyHomePageState extends State<HomePage> {
                 ),
                 Line(),
                 StoriesButton(),
+                StoriesButtonLevel1(),
                 SizedBox(height: 150),
               ],
             ),
