@@ -15,7 +15,7 @@ class _StoryPageState extends State<StoryPage> {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
             transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
