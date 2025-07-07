@@ -2,9 +2,78 @@
   "count": 1,
   "lines": [
     {
+      "index": 0,
+      "sub_index": 0,
       "jp": "をいれましょう！",
-      "hg": [{ "start": 1, "end": 1, "content": "" }]
+      "hg": [{ "place": 1, "content": "ちゃ" }]
     },
-    {}
+    {
+      "index": 1,
+      "sub_index": 0,
+      "jp": "日本人は、",
+      "hg": [
+        { "place": 0, "content": "に" },
+        { "place": 1, "content": "ほん" },
+        { "place": 2, "content": "じん" }
+      ]
+    },
+    {
+      "index": 1,
+      "sub_index": 1,
+      "jp": "お茶が好きです。",
+      "hg": [
+        { "place": 1, "content": "ちゃ" },
+        { "place": 3, "content": "す" }
+      ]
+    },
+    {
+      "index": 2,
+      "sub_index": 0,
+      "jp": "緑茶をよく飲みます。",
+      "hg": [
+        { "place": 0, "content": "りょ" },
+        { "place": 1, "content": "くちゃ" },
+        { "place": 5, "content": "の" }
+      ]
+    },
+    {
+      "index": 3,
+      "sub_index": 0,
+      "jp": "外で",
+      "hg": [{ "place": 0, "content": "そと" }]
+    },
+    {
+      "index": 4,
+      "sub_index": 0,
+      "jp": "家で",
+      "hg": [{ "place": 0, "content": "いえ" }]
+    },
+    {
+      "index": 5,
+      "sub_index": 0,
+      "jp": "会社で",
+      "hg": [{ "place": 0, "content": "かいしゃ" }]
+    },
+    {
+      "index": 6,
+      "sub_index": 0,
+      "jp": "店で",
+      "hg": [{ "place": 0, "content": "みせ" }]
+    },
+    {
+      "index": 7,
+      "sub_index": 0,
+      "jp": "緑茶はいいにおいです。",
+      "hg": [
+        { "place": 0, "content": "りょ" },
+        { "place": 1, "content": "くちゃ" }
+      ]
+    },
+    {
+      "index": 0,
+      "sub_index": 0,
+      "jp": "",
+      "hg": [{ "place": 0, "content": "" }]
+    }
   ]
 }
