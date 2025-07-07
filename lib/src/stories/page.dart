@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/back_home.dart';
+import 'package:ltrainer/src/stories/catalogue.dart';
 
 class StoriesPage extends StatefulWidget {
   const StoriesPage({super.key});
@@ -27,6 +28,8 @@ class _StoriesPageState extends State<StoriesPage> {
                 padding: EdgeInsetsGeometry.all(10),
                 child: Text('Stories', style: TextStyle(fontSize: 28)),
               ),
+              SizedBox(width: 400, height: 50),
+              Catalogue(),
             ],
           ),
         ),
