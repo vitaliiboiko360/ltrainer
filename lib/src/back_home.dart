@@ -29,3 +29,27 @@ class _TextButtonExampleAppState extends State<BackHome> {
     );
   }
 }
+
+class BackPrevButton extends StatelessWidget {
+  const BackPrevButton({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(
+          Color.fromARGB(179, 227, 241, 255),
+        ),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            side: BorderSide(color: const Color.fromARGB(255, 227, 241, 255)),
+          ),
+        ),
+      ),
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      child: Icon(Icons.arrow_back_ios_new),
+    );
+  }
+}
