@@ -130,17 +130,20 @@ class _ItemState extends State<Item> {
               padding: EdgeInsetsGeometry.directional(top: 20, bottom: 0),
               child: Text(
                 widget.name,
-                style: TextStyle(fontSize: 28, color: Colors.black),
+                style: TextStyle(fontSize: 30, color: Colors.black),
               ),
             ),
-            ClipRRect(
-              clipper: RoundedClipper(sizeX - 80, sizeY - 80),
-              child: Image(
-                width: sizeX - 50,
-                height: sizeY - 50,
-                filterQuality: FilterQuality.high,
-                isAntiAlias: true,
-                image: AssetImage('/${widget.dirUrl}/${widget.imageUrl}'),
+            Padding(
+              padding: EdgeInsetsGeometry.zero,
+              child: ClipRRect(
+                clipper: RoundedClipper(sizeX - 80, sizeY - 80),
+                child: Image(
+                  width: sizeX - 90,
+                  height: sizeY - 90,
+                  filterQuality: FilterQuality.high,
+                  isAntiAlias: true,
+                  image: AssetImage('/${widget.dirUrl}/${widget.imageUrl}'),
+                ),
               ),
             ),
           ],
