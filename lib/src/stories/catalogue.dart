@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
+import 'package:ltrainer/src/stories/item.dart';
 
 class Catalogue extends StatefulWidget {
   const Catalogue({super.key});
@@ -28,7 +29,15 @@ class _CatalogueState extends State<Catalogue> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<Widget> listStories = [];
-          for (var i = 0; i < (snapshot.data?.length)!; i++) {}
+          List<StoryInfo> inputStories = snapshot.data!;
+          for (var i = 0; i < inputStories.length; i++) {
+            var item = Item(
+              name: inputStories[i].name,
+              dirUrl: inputStories[i].dirUrl,
+              imageUrl: inputStories[i].imageUrl,
+            );
+            listStories.add(item);
+          }
           return Row(children: listStories);
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
