@@ -18,7 +18,8 @@ class _StoriesPageState extends State<StoriesPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
                 transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
