@@ -2,6 +2,7 @@
   "count": 1,
   "list": [
     {
+      "order": 0,
       "name": "お茶をいれましょう！",
       "image": "-000.jpg",
       "dir": "s1"
