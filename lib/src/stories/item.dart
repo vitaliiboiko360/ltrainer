@@ -5,8 +5,14 @@ const double sizeX = 420;
 const double sizeY = 360;
 
 class Item extends StatefulWidget {
-  const Item({super.key, required this.dirUrl, required this.imageUrl});
+  const Item({
+    super.key,
+    required this.name,
+    required this.dirUrl,
+    required this.imageUrl,
+  });
 
+  final String name;
   final String dirUrl;
   final String imageUrl;
 
@@ -17,7 +23,7 @@ class Item extends StatefulWidget {
 class RoundedClipper extends CustomClipper<RRect> {
   RoundedClipper();
 
-  final double radius = 24;
+  final double radius = 16;
 
   @override
   RRect getClip(Size size) {
@@ -63,8 +69,11 @@ class _ItemState extends State<Item> {
           return EdgeInsetsGeometry.all(10);
         }),
       ),
-      child: Stack(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Text(widget.name),
           Container(
             alignment: Alignment.center,
             child: ClipRRect(
