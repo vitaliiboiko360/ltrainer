@@ -38,7 +38,10 @@ class _CatalogueState extends State<Catalogue> {
             );
             listStories.add(item);
           }
-          return Row(children: listStories);
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: listStories,
+          );
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }
