@@ -41,7 +41,7 @@ class _ItemState extends State<Item> {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/stories/');
+        Navigator.pushNamed(context, '/stories-0');
       },
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll<Color>(
