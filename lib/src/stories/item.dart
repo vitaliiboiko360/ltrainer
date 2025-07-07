@@ -51,7 +51,7 @@ class _ItemState extends State<Item> {
       },
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll<Color>(
-          const Color.fromARGB(115, 151, 208, 255),
+          const Color.fromARGB(20, 151, 175, 255),
         ),
         fixedSize: WidgetStateProperty.resolveWith<Size?>((
           Set<WidgetState> states,
@@ -72,16 +72,24 @@ class _ItemState extends State<Item> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: 0,
         children: [
-          Text(widget.name),
+          Padding(
+            padding: EdgeInsetsGeometry.directional(top: 20, bottom: 5),
+            child: Text(
+              widget.name,
+              style: TextStyle(fontSize: 28, color: Colors.black),
+            ),
+          ),
+
           Container(
-            alignment: Alignment.center,
+            alignment: Alignment.topCenter,
             child: ClipRRect(
               clipper: RoundedClipper(),
               child: Image(
                 alignment: Alignment.center,
-                height: sizeX,
-                width: sizeY,
+                width: sizeX - 80,
+                height: sizeY - 80,
                 filterQuality: FilterQuality.high,
                 isAntiAlias: true,
                 image: AssetImage('/${widget.dirUrl}/${widget.imageUrl}'),
