@@ -40,25 +40,29 @@
       "index": 3,
       "sub_index": 0,
       "jp": "外で",
-      "hg": [{ "place": 0, "content": "そと" }]
+      "hg": [{ "place": 0, "content": "そと" }],
+      "image": "-006.jpg"
     },
     {
       "index": 4,
       "sub_index": 0,
       "jp": "家で",
-      "hg": [{ "place": 0, "content": "いえ" }]
+      "hg": [{ "place": 0, "content": "いえ" }],
+      "image": "-005.jpg"
     },
     {
       "index": 5,
       "sub_index": 0,
       "jp": "会社で",
-      "hg": [{ "place": 0, "content": "かいしゃ" }]
+      "hg": [{ "place": 0, "content": "かいしゃ" }],
+      "image": "-007.jpg"
     },
     {
       "index": 6,
       "sub_index": 0,
       "jp": "店で",
-      "hg": [{ "place": 0, "content": "みせ" }]
+      "hg": [{ "place": 0, "content": "みせ" }],
+      "image": "-008.jpg"
     },
     {
       "index": 7,
@@ -67,7 +71,8 @@
       "hg": [
         { "place": 0, "content": "りょ" },
         { "place": 1, "content": "くちゃ" }
-      ]
+      ],
+      "image": "-009.jpg"
     },
     {
       "index": 0,
