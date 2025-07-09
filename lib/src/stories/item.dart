@@ -92,7 +92,7 @@ class _ItemState extends State<Item> {
       onPressed: () {
         Navigator.pushNamed(
           context,
-          '/stories-0/story-${widget.order}',
+          '/stories/story-${widget.order}',
           arguments: StoryRouteArguments(widget.dirUrl),
         );
       },
