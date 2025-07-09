@@ -35,6 +35,7 @@ class _CatalogueState extends State<Catalogue> {
               name: inputStories[i].name,
               dirUrl: inputStories[i].dirUrl,
               imageUrl: inputStories[i].imageUrl,
+              order: inputStories[i].order,
             );
             listStories.add(item);
           }
