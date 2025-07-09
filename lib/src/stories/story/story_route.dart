@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ltrainer/src/stories/story/page.dart';
 
 onStoryRoute(settings) {
-  if (settings.name.startWith(StoryRoute.routePrefix)) {
+  if (settings.name.startsWith(StoryRoute.routePrefix)) {
     final args = settings.arguments as StoryRouteArguments;
     return MaterialPageRoute(
       builder: (context) {
