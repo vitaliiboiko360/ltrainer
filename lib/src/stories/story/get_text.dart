@@ -11,7 +11,9 @@ bool isReponseOk(http.Response response) {
   return response.statusCode == httpOk || response.statusCode == httpNotChanged;
 }
 
-Future<List<LineInfo>> getText(http.Client client, String dirUrl) async {
+typedef LineInfoList = List<LineInfo>;
+
+Future<LineInfoList> getText(http.Client client, String dirUrl) async {
   final response = await http.get(Uri.parse('/$dirUrl/text.json'));
   if (isReponseOk(response)) {
     return compute(parseKanji, response.body);
@@ -20,7 +22,7 @@ Future<List<LineInfo>> getText(http.Client client, String dirUrl) async {
   }
 }
 
-List<LineInfo> parseKanji(String responseBody) {
+LineInfoList parseKanji(String responseBody) {
   final parsed =
       (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
 
