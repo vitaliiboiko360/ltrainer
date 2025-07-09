@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ltrainer/src/back_home.dart';
 
 class StoryPage extends StatefulWidget {
-  const StoryPage({super.key, required this.title});
+  const StoryPage({super.key, required this.urlDir});
 
-  final String title;
+  final String urlDir;
 
   @override
   State<StoryPage> createState() => _StoryPageState();
@@ -23,7 +23,7 @@ class _StoryPageState extends State<StoryPage> {
           ),
           Padding(
             padding: EdgeInsetsGeometry.all(10),
-            child: Text(widget.title, style: TextStyle(fontSize: 28)),
+            child: Text(widget.urlDir, style: TextStyle(fontSize: 28)),
           ),
           SizedBox(width: 400, height: 50),
         ],
