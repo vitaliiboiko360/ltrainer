@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/home/tile_buttons.dart';
+import 'package:ltrainer/src/stories/story/story_route.dart';
 
 const double sizeX = 420;
 const double sizeY = 360;
@@ -92,7 +93,7 @@ class _ItemState extends State<Item> {
         Navigator.pushNamed(
           context,
           '/stories-0/story-${widget.order}',
-          arguments: {'dirUrl': widget.dirUrl},
+          arguments: StoryRouteArguments(widget.dirUrl),
         );
       },
 
