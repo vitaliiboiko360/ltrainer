@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/home/tile_buttons.dart';
 
@@ -12,11 +10,13 @@ class Item extends StatefulWidget {
     required this.name,
     required this.dirUrl,
     required this.imageUrl,
+    required this.order,
   });
 
   final String name;
   final String dirUrl;
   final String imageUrl;
+  final int order;
 
   @override
   State<Item> createState() => _ItemState();
@@ -89,7 +89,11 @@ class _ItemState extends State<Item> {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/stories-0');
+        Navigator.pushNamed(
+          context,
+          '/stories-0/story-${widget.order}',
+          arguments: {'dirUrl': widget.dirUrl},
+        );
       },
 
       style: TextButton.styleFrom(
