@@ -8,6 +8,7 @@ onStoryRoute(settings) {
       builder: (context) {
         return StoryPage(urlDir: args.urlDir);
       },
+      settings: settings,
     );
   }
   return null;
