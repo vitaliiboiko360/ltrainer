@@ -13,20 +13,23 @@ class StoryPage extends StatefulWidget {
 class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
-            child: BackPrevButton(),
-          ),
-          Padding(
-            padding: EdgeInsetsGeometry.all(10),
-            child: Text(widget.urlDir, style: TextStyle(fontSize: 28)),
-          ),
-          SizedBox(width: 400, height: 50),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
+              child: BackPrevButton(),
+            ),
+            Padding(
+              padding: EdgeInsetsGeometry.all(10),
+              child: Text(widget.urlDir, style: TextStyle(fontSize: 28)),
+            ),
+            SizedBox(width: 400, height: 50),
+          ],
+        ),
       ),
     );
   }
