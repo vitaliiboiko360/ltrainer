@@ -45,6 +45,10 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[Text('')]);
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: buildContent(widget.content),
+    );
   }
 }
