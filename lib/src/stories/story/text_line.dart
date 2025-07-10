@@ -24,7 +24,7 @@ class TextLine extends StatelessWidget {
               style: TextStyle(fontSize: 12),
             ),
             Text(
-              japaneseChars.characterAt(i) as String,
+              japaneseChars.characterAt(i).toString(),
               style: TextStyle(fontSize: 28),
             ),
           ],
@@ -36,6 +36,6 @@ class TextLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[buildTextLine()]);
+    return Row(children: buildTextLine());
   }
 }
