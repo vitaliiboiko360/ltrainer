@@ -15,19 +15,21 @@ class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
-              child: BackPrevButton(),
-            ),
-            SizedBox(width: 400, height: 50),
-            DisplayText(dirUrl: widget.urlDir),
-            SizedBox(width: 400, height: 50),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
+                child: BackPrevButton(),
+              ),
+              SizedBox(width: 400, height: 50),
+              DisplayText(dirUrl: widget.urlDir),
+              SizedBox(width: 400, height: 50),
+            ],
+          ),
         ),
       ),
     );
