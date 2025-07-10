@@ -56,7 +56,7 @@ class LineInfo {
       japanese: jsonObj['jp'] ?? 'no japanese',
       hiraganaInfoList:
           const <HiraganaInfo>[], //jsonObj['hg'] as HiraganaInfoList,
-      imageName: jsonObj['image'] ?? 'map.png',
+      imageName: jsonObj['image'] ?? '',
     );
   }
 }
