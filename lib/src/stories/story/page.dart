@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/back_home.dart';
+import 'package:ltrainer/src/stories/story/display_text.dart';
 
 class StoryPage extends StatefulWidget {
   const StoryPage({super.key, required this.urlDir});
@@ -23,10 +24,8 @@ class _StoryPageState extends State<StoryPage> {
               transform: Matrix4.translationValues(-160.0, 20.0, 0.0),
               child: BackPrevButton(),
             ),
-            Padding(
-              padding: EdgeInsetsGeometry.all(10),
-              child: Text(widget.urlDir, style: TextStyle(fontSize: 28)),
-            ),
+            SizedBox(width: 400, height: 50),
+            DisplayText(dirUrl: widget.urlDir),
             SizedBox(width: 400, height: 50),
           ],
         ),
