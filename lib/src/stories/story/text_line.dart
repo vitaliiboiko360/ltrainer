@@ -1,23 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/stories/story/get_text.dart';
 
-class Empty extends StatefulWidget {
-  const Empty({super.key});
+class TextLine extends StatelessWidget {
+  const TextLine({
+    super.key,
+    required this.japanese,
+    this.hiraganaInfoList = const <HiraganaInfo>[],
+  });
 
-  @override
-  State<Empty> createState() => _EmptyState();
-}
+  final String japanese;
+  final HiraganaInfoList hiraganaInfoList;
 
-class _EmptyState extends State<Empty> {
-  int _counter = 0;
-
-  void _increment() {
-    setState(() {
-      ++_counter;
-    });
+  buildTextLine() {
+    var japaneseChars = Characters(japanese);
+    var columns = <Widget>[];
+    for (var i = 0; i < japaneseChars.length; i++) {
+      final index = hiraganaInfoList.indexWhere((elm) => elm.place == i);
+      columns.add(
+        Column(
+          children: [
+            Text(
+              index != -1 ? hiraganaInfoList[i].hiragana : ' ',
+              style: TextStyle(fontSize: 12),
+            ),
+            Text(
+              japaneseChars.characterAt(i) as String,
+              style: TextStyle(fontSize: 28),
+            ),
+          ],
+        ),
+      );
+    }
+    return columns;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: <Widget>[Text('$_counter')]);
+    return Row(children: <Widget>[buildTextLine()]);
   }
 }
