@@ -16,18 +16,19 @@ typedef LineInfoList = List<LineInfo>;
 Future<LineInfoList> getText(http.Client client, String dirUrl) async {
   final response = await http.get(Uri.parse('/$dirUrl/text.json'));
   if (isReponseOk(response)) {
-    return compute(parseKanji, response.body);
+    return compute(parseLineInfo, response.body);
   } else {
     throw Exception('Failed to load LineInfo');
   }
 }
 
-LineInfoList parseKanji(String responseBody) {
-  final parsed =
-      (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
+LineInfoList parseLineInfo(String inputJson) {
+  final parsed = jsonDecode(inputJson);
+  final textLineInfoList =
+      (parsed['lines'] as List).cast<Map<String, dynamic>>();
 
-  return parsed
-      .mapIndexed<LineInfo>((index, json) => LineInfo.fromJsonObj(index, json))
+  return textLineInfoList
+      .map<LineInfo>((json) => LineInfo.fromJsonObj(json))
       .toList();
 }
 
@@ -48,13 +49,14 @@ class LineInfo {
     this.imageName = '',
   });
 
-  factory LineInfo.fromJsonObj(int orderId, Map<String, dynamic> jsonObj) {
+  factory LineInfo.fromJsonObj(Map<String, dynamic> jsonObj) {
     return LineInfo(
-      index: jsonObj['index'] as int,
-      subIndex: jsonObj['subIndex'] as int,
-      japanese: jsonObj['jp'] as String,
-      hiraganaInfoList: jsonObj['hg'] as HiraganaInfoList,
-      imageName: jsonObj['image'] as String,
+      index: jsonObj['index'] ?? -1,
+      subIndex: jsonObj['subIndex'] ?? -1,
+      japanese: jsonObj['jp'] ?? 'no japanese',
+      hiraganaInfoList:
+          const <HiraganaInfo>[], //jsonObj['hg'] as HiraganaInfoList,
+      imageName: jsonObj['image'] ?? 'map.png',
     );
   }
 }
