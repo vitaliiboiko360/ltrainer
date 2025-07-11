@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/stories/story/get_text.dart';
 
+void defaultCallback() {}
+
 class TextLine extends StatelessWidget {
-  const TextLine({
+  TextLine({
     super.key,
     required this.japanese,
     this.hiraganaInfoList = const <HiraganaInfo>[],
+    this.callback = defaultCallback,
   });
 
   final String japanese;
   final HiraganaInfoList hiraganaInfoList;
+  VoidCallback callback;
 
   buildTextLine() {
     var japaneseChars = Characters(japanese);
@@ -22,7 +26,7 @@ class TextLine extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                index != -1 ? hiraganaInfoList[i].hiragana : ' ',
+                index != -1 ? hiraganaInfoList[index].hiragana : ' ',
                 style: TextStyle(fontSize: 12),
               ),
               Text(
@@ -39,9 +43,14 @@ class TextLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: buildTextLine(),
+    return GestureDetector(
+      onTap: () {
+        callback();
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: buildTextLine(),
+      ),
     );
   }
 }
