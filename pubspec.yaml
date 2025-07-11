@@ -49,6 +49,7 @@ dependencies:
   fetch_client: ^1.1.4
   image_size_getter: ^2.4.0
   go_router: ^16.0.0
+  just_audio: ^0.10.4
 
 dev_dependencies:
   flutter_test:
