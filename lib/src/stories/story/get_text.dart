@@ -55,7 +55,10 @@ class LineInfo {
       subIndex: jsonObj['subIndex'] ?? -1,
       japanese: jsonObj['jp'] ?? 'no japanese',
       hiraganaInfoList:
-          const <HiraganaInfo>[], //jsonObj['hg'] as HiraganaInfoList,
+          (jsonObj['hg'] ?? Map<String, dynamic>)
+              .cast<Map<String, dynamic>>()
+              .map<HiraganaInfo>((jsonObj) => HiraganaInfo.fromJsonObj(jsonObj))
+              .toList(),
       imageName: jsonObj['image'] ?? '',
     );
   }
@@ -65,4 +68,8 @@ class HiraganaInfo {
   final int place;
   final String hiragana;
   HiraganaInfo(this.place, this.hiragana);
+
+  factory HiraganaInfo.fromJsonObj(Map<String, dynamic> jsonObj) {
+    return HiraganaInfo(jsonObj['place'], jsonObj['content']);
+  }
 }
