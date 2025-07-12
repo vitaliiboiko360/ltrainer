@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ltrainer/src/stories/story/audio_player.dart';
 import 'package:ltrainer/src/stories/story/get_text.dart';
@@ -20,15 +22,17 @@ class DisplayLinesImages extends StatefulWidget {
 class _DisplayLinesImagesState extends State<DisplayLinesImages> {
   late Audio audio;
   late Duration end;
+  late Stream<Duration> stream;
+  late StreamSubscription<Duration> listener;
 
   @override
   void initState() {
     super.initState();
     audio = Audio(widget.dirUrl);
-
-    Stream<Duration> stream = audio.positionDataStream;
-    stream.listen((data) {
-      if (data >= end) {
+    end = Duration.zero;
+    stream = audio.positionDataStream;
+    listener = stream.listen((data) {
+      if (data >= Duration.zero) {
         audio.pause();
       }
     });
@@ -44,7 +48,17 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
           hiraganaInfoList: lineInfo.hiraganaInfoList,
           callback: () {
             setState(() {
-              audio.playPause();
+              end = Duration(milliseconds: (lineInfo.end * 1000).toInt());
+              audio.playFrom(
+                Duration(milliseconds: (lineInfo.start * 1000).toInt()),
+              );
+              listener.cancel();
+              listener = stream.listen((data) {
+                if (data >=
+                    Duration(milliseconds: (lineInfo.end * 1000).toInt())) {
+                  audio.pause();
+                }
+              });
             });
           },
         ),
