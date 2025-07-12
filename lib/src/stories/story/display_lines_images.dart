@@ -70,7 +70,7 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
             // height: sizeY - 90,
             filterQuality: FilterQuality.high,
             isAntiAlias: true,
-            image: AssetImage('/${widget.dirUrl}/${lineInfo.imageName}'),
+            image: NetworkImage('/${widget.dirUrl}/${lineInfo.imageName}'),
           ),
         );
       }
