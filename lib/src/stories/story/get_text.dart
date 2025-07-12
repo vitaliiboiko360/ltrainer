@@ -40,6 +40,8 @@ class LineInfo {
   final String japanese;
   HiraganaInfoList hiraganaInfoList;
   final String imageName;
+  final double start;
+  final double end;
 
   LineInfo({
     this.index = 0,
@@ -47,6 +49,8 @@ class LineInfo {
     required this.japanese,
     this.hiraganaInfoList = const <HiraganaInfo>[],
     this.imageName = '',
+    this.start = 0,
+    this.end = 0,
   });
 
   factory LineInfo.fromJsonObj(Map<String, dynamic> jsonObj) {
@@ -60,6 +64,8 @@ class LineInfo {
               .map<HiraganaInfo>((jsonObj) => HiraganaInfo.fromJsonObj(jsonObj))
               .toList(),
       imageName: jsonObj['image'] ?? '',
+      start: jsonObj['start'] ?? 0,
+      end: jsonObj['end'] ?? 0,
     );
   }
 }
