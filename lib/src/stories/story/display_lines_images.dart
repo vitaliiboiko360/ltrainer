@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltrainer/src/stories/story/audio_player.dart';
 import 'package:ltrainer/src/stories/story/get_text.dart';
 import 'package:ltrainer/src/stories/story/text_line.dart';
 
@@ -17,6 +18,22 @@ class DisplayLinesImages extends StatefulWidget {
 }
 
 class _DisplayLinesImagesState extends State<DisplayLinesImages> {
+  late Audio audio;
+  late Duration end;
+
+  @override
+  void initState() {
+    super.initState();
+    audio = Audio(widget.dirUrl);
+
+    Stream<Duration> stream = audio.positionDataStream;
+    stream.listen((data) {
+      if (data >= end) {
+        audio.pause();
+      }
+    });
+  }
+
   buildContent(LineInfoList content) {
     List<Widget> output = [];
     for (var i = 0; i < content.length; i++) {
@@ -25,6 +42,11 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
         TextLine(
           japanese: lineInfo.japanese,
           hiraganaInfoList: lineInfo.hiraganaInfoList,
+          callback: () {
+            setState(() {
+              audio.playPause();
+            });
+          },
         ),
       );
       if (lineInfo.imageName != '') {
@@ -41,6 +63,12 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
     }
 
     return output;
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    audio.dispose();
   }
 
   @override
