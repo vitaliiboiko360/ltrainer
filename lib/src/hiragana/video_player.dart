@@ -27,7 +27,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     // offers several different constructors to play videos from assets, files,
     // or the internet.
     _controller = VideoPlayerController.networkUrl(
-      Uri.parse('http://127.0.0.1:8080/${widget.videoFilename}'),
+      Uri.parse('/${widget.videoFilename}'),
     );
 
     _initializeVideoPlayerFuture = _controller.initialize();
@@ -50,7 +50,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         isFirstTimePlay = true;
         _controller.pause();
         _controller = VideoPlayerController.networkUrl(
-          Uri.parse('http://127.0.0.1:8080/${widget.videoFilename}'),
+          Uri.parse('/${widget.videoFilename}'),
         );
         _initializeVideoPlayerFuture = _controller.initialize();
       });
