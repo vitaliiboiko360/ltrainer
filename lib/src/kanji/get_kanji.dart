@@ -12,9 +12,7 @@ bool isReponseOk(http.Response response) {
 }
 
 Future<List<KanjiInfo>> getKanji(http.Client client) async {
-  final response = await http.get(
-    Uri.parse('http://192.168.0.106:8080/kanji.json'),
-  );
+  final response = await http.get(Uri.parse('/kanji.json'));
   if (isReponseOk(response)) {
     return compute(parseKanji, response.body);
   } else {
