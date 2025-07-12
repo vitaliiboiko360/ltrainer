@@ -5,7 +5,9 @@
       "index": 0,
       "sub_index": 0,
       "jp": "お茶をいれましょう！",
-      "hg": [{ "place": 1, "content": "ちゃ" }]
+      "hg": [{ "place": 1, "content": "ちゃ" }],
+      "start": 3.7,
+      "end": 6.9
     },
     {
       "index": 1,
@@ -15,7 +17,9 @@
         { "place": 0, "content": "に" },
         { "place": 1, "content": "ほん" },
         { "place": 2, "content": "じん" }
-      ]
+      ],
+      "start": 12.6,
+      "end": 15.7
     },
     {
       "index": 1,
@@ -24,7 +28,9 @@
       "hg": [
         { "place": 1, "content": "ちゃ" },
         { "place": 3, "content": "す" }
-      ]
+      ],
+      "start": 15.8,
+      "end": 16.9
     },
     {
       "index": 2,
@@ -34,35 +40,45 @@
         { "place": 0, "content": "りょ" },
         { "place": 1, "content": "くちゃ" },
         { "place": 5, "content": "の" }
-      ]
+      ],
+      "start": 18.1,
+      "end": 22.3
     },
     {
       "index": 3,
       "sub_index": 0,
       "jp": "外で",
       "hg": [{ "place": 0, "content": "そと" }],
-      "image": "-006.jpg"
+      "image": "-006.jpg",
+      "start": 23.9,
+      "end": 25.2
     },
     {
       "index": 4,
       "sub_index": 0,
       "jp": "家で",
       "hg": [{ "place": 0, "content": "いえ" }],
-      "image": "-005.jpg"
+      "image": "-005.jpg",
+      "start": 26.3,
+      "end": 27.6
     },
     {
       "index": 5,
       "sub_index": 0,
       "jp": "会社で",
       "hg": [{ "place": 0, "content": "かいしゃ" }],
-      "image": "-007.jpg"
+      "image": "-007.jpg",
+      "start": 27.8,
+      "end": 29.8
     },
     {
       "index": 6,
       "sub_index": 0,
       "jp": "店で",
       "hg": [{ "place": 0, "content": "みせ" }],
-      "image": "-008.jpg"
+      "image": "-008.jpg",
+      "start": 31.2,
+      "end": 32.6
     },
     {
       "index": 7,
@@ -72,13 +88,9 @@
         { "place": 0, "content": "りょ" },
         { "place": 1, "content": "くちゃ" }
       ],
-      "image": "-009.jpg"
-    },
-    {
-      "index": 0,
-      "sub_index": 0,
-      "jp": "",
-      "hg": [{ "place": 0, "content": "" }]
+      "image": "-009.jpg",
+      "start": 38,
+      "end": 42
     }
   ]
 }
