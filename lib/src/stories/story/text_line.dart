@@ -43,14 +43,27 @@ class TextLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        callback();
-      },
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: buildTextLine(),
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TextButton(
+          onPressed: () {
+            callback();
+          },
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.black,
+            padding: EdgeInsetsGeometry.all(8),
+            overlayColor: Color.fromARGB(255, 175, 175, 175),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: buildTextLine(),
+          ),
+        ),
+      ],
     );
   }
 }
