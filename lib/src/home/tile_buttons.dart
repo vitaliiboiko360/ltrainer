@@ -312,23 +312,15 @@ class StoriesButton extends StatelessWidget {
               );
             }),
           ),
-          child: Stack(
-            children: [
-              Container(
-                alignment: Alignment.center,
-                child: ClipRRect(
-                  clipper: RoundedRevealClipper(),
-                  child: Image(
-                    alignment: Alignment.center,
-                    height: sizeX,
-                    width: sizeY,
-                    filterQuality: FilterQuality.high,
-                    isAntiAlias: true,
-                    image: AssetImage('icon_miscelenious.png'),
-                  ),
-                ),
-              ),
-            ],
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(24),
+            child: Image(
+              height: sizeX - 24,
+              width: sizeY - 24,
+              filterQuality: FilterQuality.high,
+              isAntiAlias: true,
+              image: AssetImage('icon_miscelenious.png'),
+            ),
           ),
         ),
         Padding(
@@ -382,23 +374,15 @@ class StoriesButtonLevel1 extends StatelessWidget {
               );
             }),
           ),
-          child: Stack(
-            children: [
-              Container(
-                alignment: Alignment.center,
-                child: ClipRRect(
-                  clipper: RoundedRevealClipper(),
-                  child: Image(
-                    alignment: Alignment.center,
-                    height: sizeX,
-                    width: sizeY,
-                    filterQuality: FilterQuality.high,
-                    isAntiAlias: true,
-                    image: AssetImage('81Jb6LBy9ZL_2.jpg'),
-                  ),
-                ),
-              ),
-            ],
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(24),
+            child: Image(
+              height: sizeX - 24,
+              width: sizeY - 24,
+              filterQuality: FilterQuality.high,
+              isAntiAlias: true,
+              image: AssetImage('81Jb6LBy9ZL_2.jpg'),
+            ),
           ),
         ),
         Padding(
