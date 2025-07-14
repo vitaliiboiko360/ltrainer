@@ -81,8 +81,8 @@ class _DisplayLinesImagesState extends State<DisplayLinesImages> {
 
   @override
   void dispose() {
-    super.dispose();
     audio.dispose();
+    super.dispose();
   }
 
   @override
